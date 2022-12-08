@@ -34,7 +34,7 @@ exit 1;;
     esac
 exit 0
 
-# 192.168.100.22:32400/web
+# direccion de acceso: 192.168.100.???:32400/web
 
 # mar 01 nov 2022 13:01:05 CST
 # jue 08 dic 2022 14:16:12 CST

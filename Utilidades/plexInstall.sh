@@ -41,8 +41,8 @@ echo "██ :::::Se acompleto la tarea de instalacion:::::"
 echo " "
     date
 
-#chmod 777 update-v1.0.22.sh
-#Ejecutar con ./update-v1.0.22.sh
+#chmod 777 plexInstall.sh
+#Ejecutar con ./plexInstall.sh
 
 # mar 01 nov 2022 13:01:05 CST
 # jue 08 dic 2022 14:16:12 CST
