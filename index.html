@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manual git y github</h1>
+    <h2>Primeros pasos</h2>
+    <p># Crear carpeta en muestro /home, abrimos visual estudio code y lo arrastramos ala ventana, confirmamos que es confiable.</p>
+    <p># Instalamos la app de git con:</p>
+    <li>sudo apt install git</li>
+    <p># Revisamos la vercion con</p>
+    <li>git version</li>
+    <p># Vincular la carpeta con (se una ves si ejecuta)</p>
+    <li>git init</li>
+    <p># Registrar nuevo usuario asociado a git:</p>
+    <li>git config --global user.name "ximenadmbs"</li>
+    <p># Es recomendable utilizar el correo asociado a Github</p>
+    <li>git config --global user.email "ximenacbd@yahoo.com"</li>
+    <p># Revisar el estado de seguimientos documentos de git</p>
+    <li>git status -s</li>
+    <p># Agregamos a area de segimiento de cambios o de edicion al archivo a modificar.</p>
+    <li>git add index.html</li>
+    <p># Agregamos Comentarios de modificacion y comentar lo que se trabajo:</p>
+    <li>git commit -m "Se creo el manual git index.html al repositorio"</li>
+    <p># Agregamos a todos los archivos al area de segimiento de cambios o de edicion al archivo a modificar.</p>
+    <li>git add .</li>
+    <p># Regresar el archivo en alguna version anterior en el tiemo con los comentarios:</p>
+    <li>git log --oneline</li>
+    <p>// Viajamos al commit en específico f52f3da y eliminamos los cambios futuros</p>
+    <li>git reset --hard f52f3da</li>
+    <p>-------------------------------------</p>
+</body>
+</html>
