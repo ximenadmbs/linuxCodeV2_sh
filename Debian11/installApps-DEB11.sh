@@ -20,59 +20,61 @@ echo -e "\e[0;38;5;159m          .;A    i            ..;'                       
 echo -e "\e[0;38;5;159m       .*'   '';I..       ..;IP'    \e[0m"
 echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
-echo "Ximena bash scrip [Versión 1.22.07]"
+echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
-echo -e "\e[0;38;5;209m[Intalador de completentos v1.0.9, se iniciara la instalacion.]\e[0m"
+echo -e "\e[0;38;5;209m[Intalador de completentos para Debian11 v1.1 ]\e[0m"
+echo -e "\e[0;38;5;209m[Se recominta elecutar estas instrucciones como super usuario,"
+echo -e "\e[0;38;5;209m[Se iniciara la instalacion.]\e[0m"
 
 #Seccion de instalacion de actualisaciones:
- 	sudo apt update
-    sudo apt upgrade -y
+ 	apt update
+    apt upgrade -y
 echo " "
-echo -e "\e[0;38;5;200m██ Se actualiso los paquetes del sistema\e[0m"
-    sudo apt-get autoclean
+echo -e "\e[0;38;5;209m██ Se actualiso los paquetes del sistema\e[0m"
+    apt autoclean
 echo " "
 
 #Seccion de Instalacion de repositorios:
-	sudo apt-get install software-properties-common -y
-	#sudo add-apt-repository universe
-	#sudo add-apt-repository ppa:appimagelauncher-team/stable -y
-	sudo flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
-	sudo apt update
+	apt install software-properties-common -y
+	#add-apt-repository universe
+	#add-apt-repository ppa:appimagelauncher-team/stable -y
+	flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo -y
+	apt update
 
-#appimagelauncher no es nesesario en xfce y genome debian
+#appimagelauncher no es nesesario en xfce y genome debian11
 
 echo " "
 echo -e "\e[0;38;5;209m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
 echo " "
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
-	#sudo apt install ubuntu-restricted-extras -y
-	sudo apt install gnome-tweaks -y
-	sudo gnome-shell-extensions -y
-	sudo apt install gnome-software -y
-	sudo apt install flatpak
-	sudo apt install libfuse2 -y
-	#sudo apt install appimagelauncher -y
+	#apt install ubuntu-restricted-extras -y
+	apt install gnome-tweaks -y
+	gnome-shell-extensions -y
+	apt install gnome-software -y
+	apt install flatpak -y
+	apt install libfuse2 -y
+	#apt install appimagelauncher -y
 echo " "
 
 #Seccion de Instalacion de paquetes para la terminal:
-	sudo apt install neofetch -y
-	sudo apt install htop -y
-	sudo apt install nmap -y
-	sudo apt install net-tools -y
-	#sudo apt-get install samba -y
-	#sudo apt install ufw -y
-	sudo apt install bpytop -y
-	sudo apt install fish -y
-	sudo apt install lm-sensors -y
-	#sudo apt install ssh -y
+	apt install neofetch -y
+	apt install htop -y
+	apt install nmap -y
+	apt install net-tools -y
+	#apt install samba -y
+	#apt install ufw -y
+	apt install bpytop -y
+	apt install fish -y
+	apt install lm-sensors -y
+	#apt install ssh -y
 echo " "
 
 #Seccion de Instalacion de apps de interfacegrafica:
-	sudo apt-get install cups-pdf
-	#sudo apt install font-manager
-	#sudo apt install python3-pip libqt5gui5 libqt5widgets5 qt5-gtk-platformtheme libqt5x11extras5 libqt5svg5 libqt5dbus5 sqlite3 -y
-	#sudo pip3 install bauh
+	apt-get install cups-pdf
+	#apt install font-manager
+	#apt install python3-pip libqt5gui5 libqt5widgets5 qt5-gtk-platformtheme libqt5x11extras5 libqt5svg5 libqt5dbus5 sqlite3 -y
+	#pip3 install bauh
 
 	#Flatpak (si lansan error de instalacion reiniciar el sistema)
         flatpak install flathub com.mattjakeman.ExtensionManager -y
@@ -81,7 +83,7 @@ echo " "
         flatpak install flathub nl.hjdskes.gcolor3 -y
 	
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
-	#sudo apt install plank -y
+	#apt install plank -y
 echo " "
 
 	neofetch
@@ -117,3 +119,4 @@ echo " "
 # sáb 29 oct 2022 17:32:42 CDT
 # mar 01 nov 2022 13:01:05 CST
 # mar 06 dic 2022 18:24:41 CST
+# jue 08 dic 2022 19:05:43 CST
