@@ -250,8 +250,8 @@ Dispositivo   Comienzo      Final   Sectores Tamaño Tipo
 /dev/sdd1         2048   97243135   97241088  46.4G Datos básicos de Microsoft
 /dev/sdd2     97243136 1073803263  976560128 465.7G Datos básicos de Microsoft
 /dev/sdd3   1073803264 7814035455 6740232192   3.1T Datos básicos de Microsoft
-Donde montaremos la particion:  /dev/sdd2  de la sig forma: 
 ```
+Donde montaremos la particion:  **/dev/sdd2**  de la sig forma: 
 
 > Desmontamos y ejecutamos: 
 
@@ -277,11 +277,12 @@ y con siguiente instrucción montaremos la unidad:
 
     sudo mount /dev/sde2 /mnt/hddrosa
 
-> Donde previamente sabemos el nombre de la unidad /dev/sde2 del ejercicio anterior.
+> Donde previamente sabemos el nombre de la unidad **/dev/sde2** del ejercicio anterior.
 
 Para desmontar con el siguiente comando:
 
     sudo umount /dev/sde2
 
 ---------------------------------------
+jue 10 nov 2022 11:07:46 CST
 mar 06 dic 2022 13:17:46 CST
