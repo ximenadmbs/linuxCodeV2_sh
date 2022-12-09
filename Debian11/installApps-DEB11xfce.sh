@@ -36,7 +36,7 @@ echo " "
 
 #Seccion de Instalacion de repositorios:
 	apt install software-properties-common -y
-	flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo -y
+	flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
 	apt update
 
 #appimagelauncher no es nesesario en xfce y genome debian11
@@ -47,6 +47,7 @@ echo " "
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
 	apt install gnome-software -y
+	apt install gnome-software-plugin-flatpak -y
 	apt install flatpak -y
 	apt install libfuse2 -y
 echo " "
@@ -65,13 +66,14 @@ echo " "
 echo " "
 
 #Seccion de Instalacion de apps de interfacegrafica:
-	apt-get install cups-pdf
+	apt install cups-pdf
+	apt install gnome-disk-utility
 	#apt install font-manager
 
 	#Flatpak (si lansan error de instalacion reiniciar el sistema)
-        flatpak install flathub org.videolan.VLC -y
-        flatpak install flathub io.github.hakandundar34coding.system-monitoring-center -y
-        flatpak install flathub nl.hjdskes.gcolor3 -y
+        #flatpak install flathub org.videolan.VLC -y
+        #flatpak install flathub io.github.hakandundar34coding.system-monitoring-center -y
+        #flatpak install flathub nl.hjdskes.gcolor3 -y
 	
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
 	apt install plank -y
@@ -99,6 +101,8 @@ echo -e "\e[0;38;5;159m       .*'   '';I..       ..;IP'    \e[0m"
 echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
 echo -e "\e[0;38;5;209m[ ██ :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
+echo -e "\e[0;38;5;209mNota: (Si lansan error de instalacion de flathub 'reiniciar el sistema')\e[0m"
+echo -e "\e[0;38;5;209m      (La instalacion de la tienda flatpak require reinicio)\e[0m"
 	date
 echo " "
 
