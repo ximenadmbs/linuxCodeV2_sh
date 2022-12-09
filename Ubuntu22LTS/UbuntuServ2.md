@@ -19,19 +19,52 @@
 ----------------------------
 ## 3. Una ves en el terminal con asistencia grafica y conectado via remota con SSH seguiremos los sig pasos:
 Crearremos un archivo de instrucciones para la instalacion de paquetes nesesarios.
-dentro dela carpeta rais de usuario ~/ crearemos el siguiente archivo .sh
+Dentro dela carpeta rais de usuario ~/ crearemos el siguiente archivo .sh
 
-touch installApps-UbuntuServ.sh
+    touch installUbuntuServ.sh
 
-lo editaremos con nano
+> Lo editaremos con nano.
 
-sudo nano installApps-UbuntuServ.sh
+    sudo nano installUbuntuServ.sh
 
-copiamos y pegamos el contenido del archivo installApps-UbuntuServ.sh, guardamos y cerramos damos permisos de ejecucion, y ejecutamos las instrucciones con.
+Copiamos y pegamos el contenido del archivo **installUbuntuServ.sh,** guardamos y cerramos damos permisos de ejecucion, y ejecutamos las instrucciones con.
 
-sudo chmod installApps-UbuntuServ.sh
+    sudo chmod 777 installUbuntuServ.sh
 
-./installApps-UbuntuServ.sh
+    ./installUbuntuServ.sh
+
+
+-------------
+
+sudo add-apt-repository universe
+
+
+sudo apt update
+echo "."
+echo "██ Se instalaron nuevos repositorios y se actualiso la base de datos"
+echo "."
+
+sudo apt install ubuntu-restricted-extras -y
+
+echo "."
+echo "██ Se ha instalo la tienda de aplicaciones, y componetes de sistema"
+echo "."
+
+echo "."
+sudo apt install neofetch -y
+sudo apt install htop -y
+sudo apt install nmap -y
+
+sudo apt install net-tools -y
+sudo apt install samba -y
+sudo apt install bpytop -y
+sudo apt install fish -y
+sudo apt install lm-sensors -y
+
+sudo apt install ssh -y
+sudo apt install cups-pdf
+
+---------------------------------------
 
 
 
