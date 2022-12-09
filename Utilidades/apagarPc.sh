@@ -2,7 +2,7 @@
     clear
 echo " "
 echo "+--------------------------------------------------+"
-echo "|      Ximena bash scrip [Versión 0.9.90]          |"
+echo "|      Ximena bash scrip [Versión 1.2]          |"
 echo "|  (c) Corporation. Todos los derechos reservados. |"
 echo "|                                                  |"
 echo "|    *** SCRIPT PARA EL APAGADO DEL EQUIPO ***     |"
