@@ -72,13 +72,13 @@ Activar y desactivar el servicio si es nesesario:
     sudo ufw disable
 
 ---------------------------------------
-# Configurar el servicio FTP ✅
+# 5 Configurar el servicio FTP ✅
 
 Revisamos el estado del servicio FTP:
 
     sudo service proftpd status
 
-Conficuarcion del archivo. brimos y editamos con Nano:
+### 5.1 Conficuarcion del archivo. brimos y editamos con Nano:
 
     sudo nano /etc/proftpd/proftpd.conf
 
@@ -139,16 +139,18 @@ AccessDenyMSG ":::ERROR AL CONECTAR:::"
 DefaultRoot ~ 
 ```
 
+### 5.2 Recargar el servicio:
 
-[recargar el servicio:]
-sudo service proftpd reload
+    sudo service proftpd reload
 
-#Cambiar a ip estatica  [coniscamos la ip] ✅
+---------------------------------------
+# 6 Cambiar a ip estatica  [conoscamos la ip] ✅
 
-sudo nano /etc/netplan/00-installer-config.yaml
+    sudo nano /etc/netplan/00-installer-config.yaml
 
-[Pegar el contenido en el archivo]
+Pegar el contenido en el archivo
 
+```
 # This is the network config written by 'subiquity'
 network:
   ethernets:
@@ -158,21 +160,32 @@ network:
       nameservers:
         addresses: [192.168.100.1, 8.8.8.8]
   version: 2
----------------------
+  ```
 
-sudo netplan apply
+* Donde la dirección addresser .150 la cambiaremos por la dirección que desairemos.
 
-#Cambiar zona horaria ✅
+* gateway4 es la dirección donde nos conectamos al rauter que es la puerta de enlace. esta dirección la copiamos en la linea addresser.
 
-sudo dpkg-reconfigure tzdata
+Para aplicar los cambios ejecutamos el siguiente comando:
+
+    sudo netplan apply
+
+### 7 Cambiar zona horaria ✅
+
+    sudo dpkg-reconfigure tzdata
 
 [America] [mexico cd mexico]
 
+---------------------------------------
+#### 8 Configuracion del servicio de carpetas compartidas samba ✅
 
-#Configuracion samba ✅
+Abrimos el archivo de configuración para pegar los siguientes lineas.
 
-sudo nano /etc/samba/smb.conf 
+    sudo nano /etc/samba/smb.conf 
 
+> Pegamos:
+
+```
 =====Share Definitions=====
 
 [sambaShare]
@@ -180,11 +193,95 @@ sudo nano /etc/samba/smb.conf
 	path = /home/ximena/carpetaRED
 	read only = no
 	browseable = yes
+```
+* **[sambaShare]** : sera el nombre de identificación de la dirección a la carpeta.
 
-sudo smbpasswd -a ximena      [ (ximena se refiere al usuario que tendra la carpeta compartida), }
-New SMB password:
-Retype new SMB password:      [se perira entrada de contrasena y confirmar]
+* **valid user**: sera los usuario validos que podrán leer la carpeta.
 
-sudo service smbd restart
-sudo ufw allow samba          [confirmara con Reglas actualisadas , v6)
+* **path**: sera la dirección local de la carpeta u unidad a compartir en la red.
 
+* **read only**: sera la opción de lectura solamente sera [no]
+
+* **browseable**: si la carpeta podrá ser vista en los buscadores esta como [yes]
+
+### 8.1 Dardemos de alta alos usuario las credenciales de acceso:
+
+    sudo smbpasswd -a ximena
+
+> [ximena se refiere al usuario que tendrá las credenciales necesarias para leer y modificar la carpeta compartida].
+
+Las siguientes lineas las llenaremos con es password para el usuario:
+
+    New SMB password:
+    Retype new SMB password:
+
+> [contraseña y confirmar]
+
+Reiniciamos el serbicio samba:
+
+    sudo service smbd restart
+
+Accitamos el contrafiego, dando de alta el puerto del servicio samba si es necesario.
+
+    sudo ufw allow samba
+
+>(Confirmara con Reglas actualizadas , v6)
+
+### 8.2 Anotaciones finales de samba: conoser la direccion de la carpeta compartida:
+Cualquier de los dos comondos es valido para seber la ip:
+
+    ifconfig
+    ip a
+
+y construimos la direccion de la siguiente manera:
+smb://192.168.1.150/sambaShare/
+
+---------------------------------------
+### 9 Configuraciones para discos en equipos red, por ssh ✅
+Cuando al querer copiar un archivo no se puede en un disco interno montado como ntfs de windows.
+revisamos las letras de los discos:
+
+    sudo fdisk -l
+
+nos fijamos en la ruta:
+
+```
+Dispositivo   Comienzo      Final   Sectores Tamaño Tipo
+/dev/sdd1         2048   97243135   97241088  46.4G Datos básicos de Microsoft
+/dev/sdd2     97243136 1073803263  976560128 465.7G Datos básicos de Microsoft
+/dev/sdd3   1073803264 7814035455 6740232192   3.1T Datos básicos de Microsoft
+Donde montaremos la particion:  /dev/sdd2  de la sig forma: 
+```
+
+> Desmontamos y ejecutamos: 
+
+    sudo ntfsfix /dev/sdd2
+
+>linea de salida constestacion:
+
+```
+ximena@pc-amdfx:~$ sudo ntfsfix /dev/sdd2
+Mounting volume... OK
+Processing of $MFT and $MFTMirr completed successfully.
+Checking the alternate boot sector... OK
+NTFS volume version is 3.1.
+NTFS partition /dev/sdd2 was processed successfully.
+```
+
+### 9.1 Para montajes simples de un dispositivo usb o una unidad de disco externa:
+Crearemos la carpeta donde se alijara la unidad:
+
+    mkdir /mnt/hddrosa
+
+y con siguiente instrucción montaremos la unidad:
+
+    sudo mount /dev/sde2 /mnt/hddrosa
+
+> Donde previamente sabemos el nombre de la unidad /dev/sde2 del ejercicio anterior.
+
+Para desmontar con el siguiente comando:
+
+    sudo umount /dev/sde2
+
+---------------------------------------
+mar 06 dic 2022 13:17:46 CST
