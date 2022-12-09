@@ -16,7 +16,7 @@
 
     sudo service ssh status
 
-----------------------------
+---------------------------------------
 ## 3. Una ves en el terminal con asistencia grafica y conectado via remota con SSH seguiremos los sig pasos:
 Crearremos un archivo de instrucciones para la instalacion de paquetes nesesarios.
 Dentro dela carpeta rais de usuario ~/ crearemos el siguiente archivo .sh
@@ -34,79 +34,111 @@ Copiamos y pegamos el contenido del archivo **installUbuntuServ.sh,** guardamos 
     ./installUbuntuServ.sh
 
 
--------------
+---------------------------------------
+## 4. Se instalaran los siguientes apps para el terminal.
 
-sudo add-apt-repository universe
-
-
-sudo apt update
-echo "."
-echo "██ Se instalaron nuevos repositorios y se actualiso la base de datos"
-echo "."
-
-sudo apt install ubuntu-restricted-extras -y
-
-echo "."
-echo "██ Se ha instalo la tienda de aplicaciones, y componetes de sistema"
-echo "."
-
-echo "."
-sudo apt install neofetch -y
-sudo apt install htop -y
-sudo apt install nmap -y
-
-sudo apt install net-tools -y
-sudo apt install samba -y
-sudo apt install bpytop -y
-sudo apt install fish -y
-sudo apt install lm-sensors -y
-
-sudo apt install ssh -y
-sudo apt install cups-pdf
+* sudo add-apt-repository universe
+* sudo apt install ubuntu-restricted-extras -y
+* sudo apt install neofetch -y
+* sudo apt install nmap -y
+* sudo apt install samba -y
+* sudo apt install bpytop -y  (opcion)
+* sudo apt install lm-sensors -y
+* sudo apt install ssh -y
+* sudo apt install ufw -y
+* sudo apt install fish -y
+* sudo apt install htop -y
+* sudo apt install net-tools -y
+* sudo apt install proftpd -y
 
 ---------------------------------------
+### 4.1 Revisamos el estabo del servicio , tendra que estar en enable.
 
-
-
-  sudo apt-get install samba -y
-
-  ### 3.2 Revisamos el estabo del servicio , tendra que estar en enable.
-
-  sudo service smbd status
-
-### 4 instalamos el servivio SAMBA para crear las  carpetar de red nesesarias.
-
-  sudo apt install ufw -y
+    sudo service smbd status
   
-  ### 4.1 Revisamos el estabo del servicio , tendra que estar en enable.
+### 4.2 Revisamos el estabo del servicio , tendra que estar en enable. ✅
 
-  sudo service ufw status
+    sudo service ufw status
 
+    sudo ufw status
 
+Activar y desactivar el servicio si es nesesario:
+> Activar
 
-sudo apt install fish -y
-sudo apt install htop -y
-    sudo apt install net-tools -y
+    sudo ufw enable
 
+> Desactivar
 
-#Revisar el firewall ✅
+    sudo ufw disable
 
-sudo ufw status
+---------------------------------------
+# Configurar el servicio FTP ✅
 
-sudo ufw enable
-* activar
+Revisamos el estado del servicio FTP:
 
-sudo ufw disable
-* desactivar
------------------------------
-#Instalar el servicio FTP ✅
+    sudo service proftpd status
 
-sudo apt install proftpd
-sudo service proftpd status
+Conficuarcion del archivo. brimos y editamos con Nano:
 
-* conficuarcion del archivo
+    sudo nano /etc/proftpd/proftpd.conf
 
-sudo nano /etc/proftpd/proftpd.conf
+Modificaremos el archivo, creamos una copia de seguridad , borramos el contenido y pegaremos las siguientes lineas guardamos y cerramos recatamos el servicio.
+
+``` 
+Include /etc/proftpd/modules.conf
+UseIPv6 on
+<IfModule mod_ident.c>
+        IdentLookups off
+    </IfModule>
+        ServerName "Ubuntu22"
+        ServerType standalone
+        DeferWelcome off
+        DefaultServer on
+        ShowSymlinks on
+        TimeoutNoTransfer 600
+        TimeoutStalled 600
+        TimeoutIdle 1200
+        DisplayLogin welcome.msg
+        DisplayChdir .message true
+        ListOptions "-l"
+        DenyFilter \*.*/
+        Port 21
+<IfModule mod_dynmasq.c>
+    </IfModule>
+        MaxInstances 30
+        User proftpd
+        Group nogroup
+        Umask 022 022
+        AllowOverwrite on
+        TransferLog /var/log/proftpd/xferlog
+        SystemLog /var/log/proftpd/proftpd.log
+    <IfModule mod_quotatab.c>
+        QuotaEngine off
+</IfModule>
+    <IfModule mod_ratio.c>
+        Ratios off
+</IfModule>
+    <IfModule mod_delay.c>
+        DelayEngine on
+</IfModule>
+    <IfModule mod_ctrls.c>
+        ControlsEngine off
+        ControlsMaxClients 2
+        ControlsLog /var/log/proftpd/controls.log
+        ControlsInterval 5
+        ControlsSocket /var/run/proftpd/proftpd.sock
+</IfModule>
+    <IfModule mod_ctrls_admin.c>
+        AdminControlsEngine off
+    </IfModule>
+        Include /etc/proftpd/conf.d/
+
+AccessGrantMSG "Binvenida"
+AccessDenyMSG ":::ERROR AL CONECTAR:::"
+
+DefaultRoot ~ 
+```
+
 
 [recargar el servicio:]
 sudo service proftpd reload
