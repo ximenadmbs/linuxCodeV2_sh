@@ -25,12 +25,12 @@ Cada una de las partes en color rojo de este comando las tendréis que reemplaza
 
 *Algunos ejemplos de comandos a introducir en el archivo crontab para programar el apagado de nuestro ordenador son los siguientes:*
 
-#### Apagar el ordenador todos los días a las 23 horas y 30 minutos
+### Apagar el ordenador todos los días a las 23 horas y 30 minutos
 Si queremos programar el apagado del ordenador todos los días a las **23:30 horas,** tal y como se puede ver en la captura de pantalla, tenemos que introducir el siguiente comando dentro del archivo contrab:
 
     30 23 * * * /sbin/shutdown -h now
 
-#### Programar apagado con Cron
+### Programar apagado con Cron
 
 Una vez introducido el comando guardamos los cambios y cerramos el fichero.
 
