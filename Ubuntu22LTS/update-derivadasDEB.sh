@@ -14,7 +14,7 @@ echo ""
 echo ""
 echo "██ Se Actialisaron los repositorios."
 echo "."
-    sudo apt upgrade
+    sudo apt upgrade -y
 echo ""
 echo "██ Se actualisaron los paquetes seleccionados"
 echo "."
