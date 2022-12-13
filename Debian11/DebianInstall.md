@@ -1,6 +1,6 @@
 # Debian 11:
 
-## 0 Apagado y ensendido.
+### 0 Apagado y ensendido.
 
 > restart con su:
 
@@ -14,15 +14,21 @@
 
 	systemctl poweroff
 
-## 1 Entramos con super usuario con "su" y contrasena. una ves dentro instalaremos "sudo"
+### 0.1 Instalacion servicio SSH.
+
+	apt install ssh -y
+
+	systemctl status ssh
+
+### 1 Instalacion de sudo Entramos con super usuario con [su] y contrasena. una ves dentro instalaremos "sudo"
 
 	su
 	
 > contraseña:
 
-	apt-get install sudo
+	apt install sudo
 
-## 2. Añadir tu nombre de usuario al archivo sudoers
+### 2. Añadir tu nombre de usuario al archivo sudoers
 
 **Para dar permisos al usuario, es necesario editar el archivo que se encuentra en la ruta /etc/sudoers. Para ello, abrimos el archivo:**
 
@@ -32,44 +38,44 @@
 
 	usuario ALL=(ALL:ALL) ALL
 
-## 3. Comprobar si se ha solucionado el problema
+### 3. Comprobar si se ha solucionado el problema
 **Para comprobar, simplemente hay que ejecutar un comando con sudo delante:**
 
 	sudo apt update 
 	sudo apt upgrade
-	sudo apt-get autoclean
+	sudo apt autoclean
 
-## 4 Cambiar a ip estatica  [coniscamos la ip]
+### 4 Cambiar a ip estatica  [coniscamos la ip]
 
-	sudo apt install net-tools
+	apt install net-tools
 
 	ip a
 
 > editaremos el fichero /etc/network/interfaces
 
-	sudo nano /etc/network/interfaces
+	nano /etc/network/interfaces
 
 > Modificaremos la sección de «the primary network interface» , cambiaremos dhcp por static y añadiremos los siguientes parámetros:
-
+``` bash
 	iface eth0 inet static
 		address 192.168.100.100
 		netmask 255.255.255.0
 		network 192.168.100.1
 		broadcast 192.168.100.255
 		gateway 192.168.100.1
-
+```
 > grabamos y reseteamos el pc
 	
 	Ctrl+Alt+Del
 
 --------------------------------------------
-## 5 Cambiar zona horaria
+### 5 Cambiar zona horaria
 
-	sudo dpkg-reconfigure tzdata
+	dpkg-reconfigure tzdata
 
 > [America] [Mexico cd Mexico] 
 
-## 5.1. Modificar .bashrc
+### 5.1. Modificar .bashrc
 **dentro dela carpeta ~ (home/usuario/) vemos com ls -a ,para ver archivos ocultos**
 
 	nano .bashrc
@@ -84,28 +90,28 @@
 	fish
 
 --------------------------------------------
-## 6 Montar la carpeta de Red 
+### 6 Montar la carpeta de Red 
 
 	mkdir ~/redMount
 
-	sudo mount -t cifs -o username=xenon,password=14789,noperm //192.168.100.22/data-500gb ~/redMount
+	mount -t cifs -o username=xenon,password=14789,noperm //192.168.100.22/data-500gb ~/redMount
 
 **"o podemos ejecutar el archivo"**
 
 	./mountRed-v1.22.07.sh
 
-## 6.1 Ejecutarmos el archivo:
+### 6.1 Ejecutarmos el archivo:
 
 	./installApps-DEB-v1.22.07.sh
 
 --------------------------------------------
-## 7 red Instalacion de Samba
+### 7 red Instalacion de Samba
 
-	sudo apt install samba
+	apt install samba
 
 > agregar usuario, creera una carperta en Home
 
-	sudo adduser blockout1
+	adduser blockout1
 
 > pass: 12qw34er5
 
@@ -113,17 +119,17 @@
 
 	ip a   [192.168.100.112]
 
-## 7.1 crear carpera de red   
+### 7.1 crear carpera de red   
 
 	mkdir /home/ximenadeb/carpetaRED
 
 > darpermisos para todos:
 
-	sudo chmod o+w . -R
+	chmod o+w . -R
 
-## 7.2 configurar carpeta en samba con: 
+### 7.2 configurar carpeta en samba con: 
 
-	sudo nano /etc/samba/smb.conf
+	nano /etc/samba/smb.conf
 
 **"o podemos ejecutar el archivo"**
 
@@ -131,6 +137,7 @@
 
 ## 7.3 escribir las sig linear al final del archivo y guardar
 
+``` bash
 	=====Share Definitions=====
 
 	[sambaRED]
@@ -138,31 +145,32 @@
 		path = /home/ximenadeb/compartido
 		read only = no
 		browseable = yes
+```
 
-## 7.4 dar de alta al usuario en samba
+### 7.4 dar de alta al usuario en samba
 **(ximenadeb se refiere al usuario que tendra la carpeta compartida),**
 
-	sudo smbpasswd -a ximenadeb      
+	smbpasswd -a ximenadeb      
 	New SMB password:
 	Retype new SMB password:      
 > se pedira entrada de contrasena y confirmar
 
 **abrir los puertos de samba, habilitar el contrafuegos**
 
-	sudo service smbd restart
-	#sudo ufw allow samba
-	#sudo ufw allow OpenSSH
+	service smbd restart
+	#ufw allow samba
+	#ufw allow OpenSSH
 
 > confirmara con Reglas actualisadas , v6, revisamos el estatus del servicio
 
-	sudo ufw status      
+	ufw status      
 
-## 7.5 anotamos la ip con [ip a] y nombre de la carpteta tendremos la sig direccion.  
+### 7.5 anotamos la ip con [ip a] y nombre de la carpteta tendremos la sig direccion.  
 
 	smb://192.168.100.112/sambaRED/
 
 --------------------------------------------
-## 8 instalar plex:
+### 8 instalar plex:
 **"ejecutamos el archivo"**
 
 	./plexInstall.sh
@@ -174,25 +182,25 @@
 
 ### 9 Instalar el servicio FTP
 
-	sudo apt install proftpd
-	sudo service proftpd status
+	apt install proftpd
+	service proftpd status
 
 > conficuarcion del archivo
 
-	sudo nano /etc/proftpd/proftpd.conf
+	nano /etc/proftpd/proftpd.conf
 
 > recargar el servicio:
 
-	sudo service proftpd reload
+	service proftpd reload
 
 ------------------------------------------------------------
 
-## 10 Instalamos interfaz grafica:
+### 10 Instalamos interfaz grafica:
 **Instalamos la aplicacion si en caso que no la tengamos**
 
-	sudo apt install tasksel   
+	apt install tasksel
 
-> Iniciamos con [su] el comando 
+> Iniciamos como super usuario [su] el comando.
 
 	tasksel  
 
@@ -203,15 +211,15 @@
 	systemctl poweroff
 ------------------------------------------------------------
 
-## Instalar Apps
+### Instalar Apps
 **Extencion Manajer en flatpak**
 	
 	flatpak install flathub com.mattjakeman.ExtensionManager
 
 **Tienda de aplicaciones de gnome**
 	
-	sudo apt install gnome-software -y
+	apt install gnome-software -y
 
 **Administrador de discos de Gnome**
 	
-	sudo apt install gnome-disk-utility
+	apt install gnome-disk-utility
