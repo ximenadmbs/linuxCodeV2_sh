@@ -1,5 +1,19 @@
 # Debian 11:
 
+## 0 Apagado y ensendido.
+
+> restart con su:
+
+	su
+
+	Ctrl+Alt+Del
+
+> apagar sistema:
+
+	su
+
+	systemctl poweroff
+
 ## 1 Entramos con super usuario con "su" y contrasena. una ves dentro instalaremos "sudo"
 
 	su
@@ -46,7 +60,7 @@
 
 > grabamos y reseteamos el pc
 	
-	sudo reboot
+	Ctrl+Alt+Del
 
 --------------------------------------------
 ## 5 Cambiar zona horaria
@@ -185,8 +199,8 @@
 **Con flechas se mueve para selecccionar el escritorio, espacio para seleccionar y Tab para aceptar o cancelar**
 **Una ves termine al 100% reiniciaremos con: para entrar al modo grafico**
 
-	sudo reboot
-	sudo shutdown -h now
+	Ctrl+Alt+Del
+	systemctl poweroff
 ------------------------------------------------------------
 
 ## Instalar Apps
