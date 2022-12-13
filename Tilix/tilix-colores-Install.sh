@@ -7,11 +7,31 @@ echo "|                                                  |"
 echo "|      *** Tilix instalador de colores ***         |"
 echo "+--------------------------------------------------+"
 echo " "
-echo " configuracion-colores-tilix.tar.xz "
-	~/.config/
-echo " ~/.config/tilix/schemes/ "
-date
+echo -e "\e[0;38;5;209mSe instalaran los perfiles de colores para tilix\e[0m"
+	cp -r tilix ~/.config/
+	cp biraXim.zsh-theme ~/.oh-my-zsh/themes/
+
+echo " "
+echo " Se instalo en: ~/.config/tilix/schemes/ "
+echo " "
+echo " tilix/schemes/Dracula.json "
+echo " tilix/schemes/Fairy Floss Dark.json "
+echo " tilix/schemes/Foxnightly.json  "
+echo " tilix/schemes/Harper.json  "
+echo " tilix/schemes/Horizon Dark.json  "
+echo " tilix/schemes/Omni.json  "
+echo " tilix/schemes/Rosé Pine Dawn.json  "
+echo " tilix/schemes/Rosé Pine Moon.json  "
+echo " tilix/schemes/Rosé Pine.json  "
+echo " tilix/schemes/Wild Cherry.json "
+echo " "
+echo " Se intalo el tema del pront zsh en ~/.oh-my-zsh/themes/"
+echo -e "Nombre del tema:\e[0;38;5;209m biraXim \e[0m"
+echo " "
+	date
 echo " "
 
-#chmod 777 update-v1.0.22.sh
-#Ejecutar con ./update-v1.0.22.sh
+# chmod 777 tilix-colores-Install.sh
+# Ejecutar con ./tilix-colores-Install.sh
+
+# mar 13 dic 2022 15:36:48 CST
