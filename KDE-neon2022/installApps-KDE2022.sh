@@ -19,7 +19,7 @@ echo -e "\e[0;38;5;159m          .;A    I            ..;I'                      
 echo -e "\e[0;38;5;159m       .*'   '';I..       ..;;I'    \e[0m"
 echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
-echo "Ximena bash scrip [Versión 1.0.27.14]"
+echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
     echo -e "\e[0;38;5;129m Edicion KDE neon \e[0m"
 echo -e "\e[0;38;5;209m[Actualisador e intalador de completentos v1.2, se iniciara la instalacion.]\e[0m"
