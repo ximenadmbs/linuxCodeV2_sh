@@ -1,15 +1,16 @@
 #!/bin/bash
 
-echo "Ximena bash scrip [Versión 1.0.26.10]"
+echo "Ximena bash scrip [Versión 1]"
 echo "(c) Corporation. Todos los derechos reservados, "
-echo "[ ██ Instalador de Controladores Impresora Samsumg  M2020, junto a este bash se encuentra el ejecutable suldr-keyring_2_all.deb, de lo contrario se bajara del servidor que en seguida se montara a los repositorios"
+echo "[ ██ Instalador de Controladores Impresora Samsumg  M2020, se bajara del servidor que en seguida se montara a los repositorios"
 echo ""
-sudo bash -c 'echo "deb http://www.bchemnet.com/suldr/ debian extra" >> /etc/apt/sources.list'
-wget http://www.bchemnet.com/suldr/pool/debian/extra/su/suldr-keyring_2_all.deb
-sudo dpkg -i suldr-keyring_2_all.deb
-sudo apt update
-apt search suld-driver
-sudo apt install suld-driver2-1.00.39 -y
+    sudo bash -c 'echo "deb http://www.bchemnet.com/suldr/ debian extra" >> /etc/apt/sources.list'
+    wget http://www.bchemnet.com/suldr/pool/debian/extra/su/suldr-keyring_2_all.deb
+        sudo dpkg -i suldr-keyring_2_all.deb
+
+    sudo apt update
+    apt search suld-driver
+        sudo apt install suld-driver2-1.00.39 -y
 
 echo "[ ██ ::::::::::Tareas terminadas::::::::::"
 echo "."
