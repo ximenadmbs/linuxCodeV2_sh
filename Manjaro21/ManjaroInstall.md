@@ -28,8 +28,9 @@ smb://192.168.100.22/data-500gb/
 
 ### Programas AppsImage  ✅
 
-[Copiar el prgograma en carpeta home]
-[Cambiar permisos a ejecutable,]
+* Copiar el prgograma en carpeta home
+
+* Cambiar permisos a ejecutable
 
     sudo pacman -S appimagelauncher
 
@@ -64,7 +65,9 @@ Usa sistema zsh
 * Permisos para carpetas
 
     sudo chmod 770
+    
     sudo chmod o+w . -R
+    
     sudo chmod o+w ~/carpetaRED -R
 
 --------------------------------------------
