@@ -8,7 +8,20 @@
     lsb_release -a
 echo " "
 #se muestra uso de la memoria del sistema.
-    free
+    free -h
+        #espera 1 segundo
+        sleep 1s
+echo " "
+#se muestra el uso de los discons en el sistema
+    df -h
+        sleep 1s
+echo " "
+#se muestra la ip del equipo
+    ip a
+        sleep 1s
+echo " "
+#demuestra coneccion a internet
+    ping -c 5 google.com
 echo " "
 #muestra las verciones de las siguientes aplicaciones de terminal.
     neofetch --version
