@@ -1,4 +1,8 @@
 #!/bin/bash
+
+#y comprobamos el estado de networking
+    systemctl status networking
+
 #busqueda de paquetes en apt.
     apt search suld-driver
     apt search neofetch
@@ -24,6 +28,7 @@ echo " "
     ping -c 5 google.com
 echo " "
 #muestra las verciones de las siguientes aplicaciones de terminal.
+    dpkg --version
     neofetch --version
     htop --version
     nmap --version

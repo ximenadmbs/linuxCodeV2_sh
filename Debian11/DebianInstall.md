@@ -1,12 +1,12 @@
 # Debian 11:
 
-### 0 Apagado y ensendido.
+### 0 Apagado y ensendido con super usuario [su]. ✅
 
 > restart con su:
 
 	su
 
-	Ctrl+Alt+Del
+	systemctl reboot
 
 > apagar sistema:
 
@@ -14,13 +14,13 @@
 
 	systemctl poweroff
 
-### 0.1 Instalacion servicio SSH.
+### 0.1 Instalacion servicio SSH (ya instalado). ✅
 
-	apt install ssh -y
+	#apt install ssh -y
 
 	systemctl status ssh
 
-### 1 Instalacion de sudo Entramos con super usuario con [su] y contrasena. una ves dentro instalaremos "sudo"
+### 1 Instalacion de sudo Entramos con super usuario con [su] y contrasena. una ves dentro instalaremos "sudo" ✅
 
 	su
 	
@@ -45,9 +45,9 @@
 	sudo apt upgrade
 	sudo apt autoclean
 
-### 4 Cambiar a ip estatica  [coniscamos la ip]
+### 4 Cambiar a ip estatica  [coniscamos la ip] ✅
 
-	apt install net-tools
+	#apt install net-tools
 
 	ip a
 
@@ -57,25 +57,40 @@
 
 > Modificaremos la sección de «the primary network interface» , cambiaremos dhcp por static y añadiremos los siguientes parámetros:
 ``` bash
-	iface eth0 inet static
-		address 192.168.100.100
-		netmask 255.255.255.0
-		network 192.168.100.1
-		broadcast 192.168.100.255
-		gateway 192.168.100.1
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug enp0s3
+iface enp0s3 inet static
+        address 192.168.100.132
+        netmask 255.255.255.0
+        network 192.168.100.1
+        broadcast 192.168.100.255
+        gateway 192.168.100.1
+
+# This is an autoconfigured IPv6 interface
+iface enp0s3 inet6 auto
+
 ```
 > grabamos y reseteamos el pc
 	
-	Ctrl+Alt+Del
+	systemctl reboot
 
 --------------------------------------------
-### 5 Cambiar zona horaria
+### 5 Cambiar zona horaria ✅
 
-	dpkg-reconfigure tzdata
+	sudo dpkg-reconfigure tzdata
 
-> [America] [Mexico cd Mexico] 
+> [America] [Mexico cd Mexico]
 
-### 5.1. Modificar .bashrc
+### 5.1. Modificar .bashrc ✅
 **dentro dela carpeta ~ (home/usuario/) vemos com ls -a ,para ver archivos ocultos**
 
 	nano .bashrc
@@ -88,6 +103,10 @@
 
 	date
 	fish
+
+> actualisamos
+
+	source .bashrc
 
 --------------------------------------------
 ### 6 Montar la carpeta de Red 

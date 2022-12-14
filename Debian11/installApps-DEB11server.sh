@@ -25,13 +25,15 @@ echo "(c) Corporation. Todos los derechos reservados."
 echo -e "\e[0;38;5;209m[Intalador de completentos para Debian11 server v1.2 ]\e[0m"
 echo -e "\e[0;38;5;209m[Se recomienda elecutar estas instrucciones como super usuario,"
 echo -e "\e[0;38;5;209m[Se iniciara la instalacion.]\e[0m"
+        sleep 2s
 
 #Seccion de instalacion de actualisaciones:
  	apt update
     apt upgrade -y
 echo " "
 echo -e "\e[0;38;5;209m██ Se actualiso los paquetes del sistema\e[0m"
-    apt autoclean
+        sleep 1s
+	apt autoclean
 echo " "
 
 #Seccion de Instalacion de repositorios:
@@ -40,19 +42,36 @@ echo " "
 
 echo " "
 echo -e "\e[0;38;5;209m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
+        sleep 1s
 echo " "
 
 #Seccion de Instalacion de paquetes para la terminal:
 	apt install neofetch -y
+echo -e "\e[0;38;5;209m█ neofetch installed ✅\e[0m"
+        sleep 1s
 	apt install htop -y
+echo -e "\e[0;38;5;209m█ htop installed ✅\e[0m"
+        sleep 1s
 	apt install nmap -y
+echo -e "\e[0;38;5;209m█ nmap installed ✅\e[0m"
+        sleep 1s
 	apt install net-tools -y
+echo -e "\e[0;38;5;209m█ net-tools installed ✅\e[0m"
+        sleep 1s
 	apt install samba -y
+echo -e "\e[0;38;5;209m█ samba installed ✅\e[0m"
+        sleep 1s
 	apt install ufw -y
+echo -e "\e[0;38;5;209m█ ufw installed ✅\e[0m"
+        sleep 1s
 	apt install bpytop -y
+echo -e "\e[0;38;5;209m█ bpytop installed ✅\e[0m"
+        sleep 1s
 	apt install fish -y
-	apt install lm-sensors -y
-	apt install ssh -y
+echo -e "\e[0;38;5;209m█ fish installed ✅\e[0m"
+        sleep 1s
+	#apt install lm-sensors -y
+	#apt install ssh -y
 echo " "
 
 	neofetch
