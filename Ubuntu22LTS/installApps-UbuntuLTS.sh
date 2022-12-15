@@ -1,25 +1,37 @@
 #!/bin/bash
 
 echo " "
-echo "                    l.                     _    _ _  "
-echo "                    llb                   \ \  / (_) "
-echo "             ..:''  lllb l:                \ \/ / _ ____   ____ ____   ____  "
-echo "  '::.     .:'      llllb  ':.              )  ( | |    \ / _  )  _ \ / _  | "
-echo "      ''l::         llllb   'l.            / /\ \| | | | ( (/ /| | | ( ( | | "
-echo "         ;'lllb:.    llllP     l          /_/  \_\_|_|_|_|\____)_| |_|\_||_| "
-echo "        :    'lllllb lllli      l     "
-echo "        l       'QllllllllL.    l          _                _                         _"
-echo "        l          :llllllPl.   l         | |              | |                       (_) "
-echo "         l       .:llllP'      l'         | | _   ____  ___| | _      ___  ____  ____ _ ____"
-echo "          l    .;llP'        .l'          | || \ / _  |/___) || \    /___)/ ___)/ ___) |  _ \ "
-echo "           'l.' .'         .lP'           | |_) | ( | |___ | | | |  |___ ( (___| |   | | | | | "
-echo "         .-' ':+..     ..+l'              |____/ \_||_(___/|_| |_|  (___/ \____)_|   |_| ||_/  "
-echo "       '     '    '''''                                                                |_|    "
+echo -e "\e[0;38;5;129m                      I.       \e[0m"
+echo -e "\e[0;38;5;129m                      XIm       \e[0m"
+echo -e "\e[0;38;5;129m                  ....XIIm .               _    _ _  \e[0m"
+echo -e "\e[0;38;5;135m             ..;I''   IXIMI 'I;;          \ \  / (_)   \e[0m"
+echo -e "\e[0;38;5;135m..        ..I'         XMMML    I;.        \ \/ / _ ____   ____ ____   ____   \e[0m"
+echo -e "\e[0;38;5;135m  '';..  ;P            XIMENA     'I.       )  ( | |    \ / _  )  _ \ / _  |  \e[0m"
+echo -e "\e[0;38;5;141m     ''XXi+.           :IMENA:      ':     / /\ \| | | | ( (/ /| | | ( ( | |  \e[0m"
+echo -e "\e[0;38;5;141m      .:''IMENAi:.     :XIMEN:       ':   /_/  \_\_|_|_|_|\____)_| |_|\_||_|  \e[0m"
+echo -e "\e[0;38;5;141m      X    '':XIMENA:  :IMENA         I;   \e[0m"
+echo -e "\e[0;38;5;147m      I        '';BACHSCRIPXIL.        I   _                _                         _\e[0m"
+echo -e "\e[0;38;5;147m      M           '';XIMENABASHXL      I  | |              | |                       (_) \e[0m"
+echo -e "\e[0;38;5;147m      E              ;XXXBASHP*''*     I  | | _   ____  ___| | _      ___  ____  ____ _ ____ \e[0m"
+echo -e "\e[0;38;5;153m       N          .4XIMENAP'          I   | || \ / _  |/___) || \    /___)/ ___)/ ___) |  _ \  \e[0m"
+echo -e "\e[0;38;5;153m        A       .;XIMP''            .I    | |_) | ( | |___ | | | |  |___ ( (___| |   | | | | |  \e[0m"
+echo -e "\e[0;38;5;153m         'B. .;'' ;'              .;I     |____/ \_||_(___/|_| |_|  (___/ \____)_|   |_| ||_/     \e[0m"
+echo -e "\e[0;38;5;159m          .;A    I            ..;I'                                                    |_|      \e[0m"
+echo -e "\e[0;38;5;159m       .*'   '';I..       ..;;I'    \e[0m"
+echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
-echo "Ximena bash scrip [Versión 1.6]"
+echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
 echo "██ Instalador de completentos, se iniciara la instalacion."
 echo " "
+#Seccion de instalacion de actualisaciones:
+    sudo apt update
+    sudo apt upgrade -y
+echo " "
+echo -e "\e[0;38;5;200m[ ██ Se actualiso los paquetes del sistema\e[0m"
+    sudo apt-get autoclean
+echo " "
+
 #Seccion de Instalacion de repositorios:
     sudo add-apt-repository universe
     sudo add-apt-repository ppa:appimagelauncher-team/stable -y
