@@ -41,3 +41,7 @@ echo " "
     sl --version
     figlet --version
     ssh --version
+
+    sudo service smbd status
+
+    sudo service proftpd status
