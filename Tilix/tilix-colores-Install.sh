@@ -10,7 +10,6 @@ echo " "
 echo -e "\e[0;38;5;209mSe instalaran los perfiles de colores para tilix\e[0m"
 	cp -r tilix ~/.config/
 	cp biraXim.zsh-theme ~/.oh-my-zsh/themes/
-
 echo " "
 echo " Se instalo en: ~/.config/tilix/schemes/ "
 echo " "
@@ -27,6 +26,9 @@ echo " tilix/schemes/Wild Cherry.json "
 echo " "
 echo " Se intalo el tema del pront zsh en ~/.oh-my-zsh/themes/"
 echo -e "Nombre del tema:\e[0;38;5;209m biraXim \e[0m"
+echo " "
+	cp config.fish ~/.config/fish/
+echo " Se intalo titulo de bienvenida para fish en ~/.config/fish/"
 echo " "
 	date
 echo " "
