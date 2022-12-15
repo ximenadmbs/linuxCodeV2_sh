@@ -78,6 +78,24 @@ Finalmente, agregue el siguiente comando a su archivo .zshrc:
 
     source .zshrc
 
+### Instlalacion de Syntax para zsh, 
+Pegamos en la terminal el sigiente repositorio de git, unabes en la carpeta home la movemos al directorio **~/.zsh**
+
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+Ejecutamos la siguiente instruccion ala terminal para que se genere la ruta en el archivo .zshrc
+
+```bash
+echo "source ${(q-)PWD}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+```
+> la ruta donde que se escrivio en el archivo .zshrc es:
+
+	source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+> actialisamos:
+
+    source .zshrc
+
 ----------------------------------------------------
 ### Instalalamos oh my zsh para Root:
 	

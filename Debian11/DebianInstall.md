@@ -282,8 +282,8 @@ DefaultRoot ~
 	sudo ufw disable
 
 ------------------------------------------------------------
-### 10 Instalamos interfaz grafica:
-Instalamos la aplicacion si en caso que no la tengamos
+### 10 Instalamos interfaz grafica: ✅
+Instalamos la aplicacion si en caso que no la tengamos (ya se encuentra instalado de base)
 
 	apt install tasksel
 
