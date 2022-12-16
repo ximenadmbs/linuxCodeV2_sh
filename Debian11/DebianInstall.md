@@ -302,11 +302,9 @@ Una ves termine al 100% reiniciaremos para entrar al modo grafico
 	systemctl poweroff
 
 ------------------------------------------------------------
-### Instalar Apps en Gnome o xfce
+### Instalar Apps en xfce
 
 ``` bash
-#Extencion Manajer en flatpak
-	flatpak install flathub com.mattjakeman.ExtensionManager
 
 #Tienda de aplicaciones de gnome**
 	apt install gnome-software -y

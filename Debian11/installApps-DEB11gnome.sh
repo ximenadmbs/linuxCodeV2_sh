@@ -23,21 +23,23 @@ echo " "
 echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
 echo -e "\e[0;38;5;209m[Intalador de completentos para Debian11 gnome v1.1 ]\e[0m"
-echo -e "\e[0;38;5;209m[Se recomienda elecutar estas instrucciones como super usuario,"
+echo -e "\e[0;38;5;209m[Se recomienda ejecutar estas instrucciones como super usuario,"
 echo -e "\e[0;38;5;209m[Se iniciara la instalacion.]\e[0m"
+#espera 1 segundo
+        sleep 2s
 
 #Seccion de instalacion de actualisaciones:
  	apt update
     apt upgrade -y
+	apt autoclean
 echo " "
 echo -e "\e[0;38;5;209m██ Se actualiso los paquetes del sistema\e[0m"
-    apt autoclean
 echo " "
+#espera 2 segundo
+        sleep 2s
 
 #Seccion de Instalacion de repositorios:
-	apt install software-properties-common -y
-	#add-apt-repository universe
-	#add-apt-repository ppa:appimagelauncher-team/stable -y
+	add-apt-repository ppa:appimagelauncher-team/stable -y
 	flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo -y
 	apt update
 
@@ -46,46 +48,73 @@ echo " "
 echo " "
 echo -e "\e[0;38;5;209m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
 echo " "
+        sleep 1s
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
-	#apt install ubuntu-restricted-extras -y
-	apt install gnome-tweaks -y
-	gnome-shell-extensions -y
-	apt install gnome-software -y
 	apt install flatpak -y
-	apt install libfuse2 -y
-	#apt install appimagelauncher -y
+	apt install appimagelauncher -y
 echo " "
 
 #Seccion de Instalacion de paquetes para la terminal:
 	apt install neofetch -y
+	echo -e "\e[0;38;5;209m█ neofetch installed \e[0m"
+        sleep 1s
 	apt install htop -y
+	echo -e "\e[0;38;5;209m█ htop installed \e[0m"
+        sleep 1s
 	apt install nmap -y
+	echo -e "\e[0;38;5;209m█ nmap installed \e[0m"
+        sleep 1s
 	apt install net-tools -y
-	#apt install samba -y
-	#apt install ufw -y
+	echo -e "\e[0;38;5;209m█ net-tools installed \e[0m"
+        sleep 1s
+	apt install samba -y
+	echo -e "\e[0;38;5;209m█ samba installed \e[0m"
+        sleep 1s
+	apt install ufw -y
+	echo -e "\e[0;38;5;209m█ ufw installed \e[0m"
+        sleep 1s
 	apt install bpytop -y
+	echo -e "\e[0;38;5;209m█ bpytop installed \e[0m"
+        sleep 1s
 	apt install fish -y
+	echo -e "\e[0;38;5;209m█ fish installed \e[0m"
+        sleep 1s
 	apt install lm-sensors -y
-	#apt install ssh -y
+	echo -e "\e[0;38;5;209m█ lm-sensors installed \e[0m"
+        sleep 1s
+	apt install ssh -y
+	echo -e "\e[0;38;5;209m█ ssh installed \e[0m"
+        sleep 1s
 echo " "
 
 #Seccion de Instalacion de apps de interfacegrafica:
 	apt-get install cups-pdf
-	#apt install font-manager
-	#apt install python3-pip libqt5gui5 libqt5widgets5 qt5-gtk-platformtheme libqt5x11extras5 libqt5svg5 libqt5dbus5 sqlite3 -y
-	#pip3 install bauh
+	echo -e "\e[0;38;5;209m█ cups-pdf installed \e[0m"
+        sleep 1s
+	apt install font-manager -y
+	echo -e "\e[0;38;5;209m█ font-manager installed \e[0m"
+        sleep 1s
 
-	#Flatpak (si lansan error de instalacion reiniciar el sistema)
+	#Instalación de Paquetería Flatpak (si lanzan error de instalación reiniciar el sistema)
+	echo -e "\e[0;38;5;209m█ Instalación de Paquetería Flatpak (si lanzan error de instalación reiniciar el sistema)\e[0m"
+        sleep 2s
         flatpak install flathub com.mattjakeman.ExtensionManager -y
+		echo -e "\e[0;38;5;209m█ Flatpak ExtensionManager installed \e[0m"
+        	sleep 1s
         flatpak install flathub org.videolan.VLC -y
+		echo -e "\e[0;38;5;209m█ Flatpak VLC installed \e[0m"
+        	sleep 1s
         flatpak install flathub io.github.hakandundar34coding.system-monitoring-center -y
+		echo -e "\e[0;38;5;209m█ Flatpak system-monitoring-center installed \e[0m"
+        	sleep 1s
         flatpak install flathub nl.hjdskes.gcolor3 -y
-	
+		echo -e "\e[0;38;5;209m█ Flatpak gcolor3 installed \e[0m"
+        	sleep 1s
+		
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
 	#apt install plank -y
 echo " "
-
 	neofetch
 echo " "
 echo -e "\e[0;38;5;129m                      I        \e[0m"
@@ -120,3 +149,4 @@ echo " "
 # mar 01 nov 2022 13:01:05 CST
 # mar 06 dic 2022 18:24:41 CST
 # jue 08 dic 2022 19:05:43 CST
+# jue 15 dic 2022 19:23:05 CST
