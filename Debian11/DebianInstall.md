@@ -314,3 +314,20 @@ Una ves termine al 100% reiniciaremos para entrar al modo grafico
 ### Instalacion de Appimage (gnome)
 
 Debian de base tiene instalado el paquete libfuse2 , Appimage no acepto el repositorio por lo mismo no es posible instalar el paquete: appimagelauncher, pero es posible ejecutar programas Appimage con solo cambiar la propiedad a ejecutable, se podrán generar lanzadores para estas aplicaciones.
+
+### Instalar barra inferior y los demas complementos de extenxiones de gnome. ✅
+
+* Clipboard indicator
+* Blur my Shell
+* Dash to Dock
+* User Themes (instalada desde base)
+* Show Desktop Button
+* compiz alike magic
+* Emoji selector
+* Desktop Clock (no es compatible)
+
+### Installar iconos de Yaru-NaturalGnome
+
+### Instalar Thema WhiteSur-gtk-theme.tar.x
+
+### Instalar zsh y complementos.
