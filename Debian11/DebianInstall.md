@@ -305,11 +305,12 @@ Una ves termine al 100% reiniciaremos para entrar al modo grafico
 ### Instalar Apps en xfce
 
 ``` bash
-
 #Tienda de aplicaciones de gnome**
 	apt install gnome-software -y
 
 #Administrador de discos de Gnome**
 	apt install gnome-disk-utility
-
 ```
+### Instalacion de Appimage (gnome)
+
+Debian de base tiene instalado el paquete libfuse2 , Appimage no acepto el repositorio por lo mismo no es posible instalar el paquete: appimagelauncher, pero es posible ejecutar programas Appimage con solo cambiar la propiedad a ejecutable, se podrán generar lanzadores para estas aplicaciones.
