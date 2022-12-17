@@ -107,6 +107,23 @@ echo " "
 		
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
 	#apt install plank -y
+
+#Seccion de instalaciones de Plantillas y complementos personalisados.
+    touch ~/Plantillas/'Documento txt.txt'
+        echo ". " >> ~/Plantillas/'Documento txt.txt'
+
+    touch ~/Plantillas/'Documento md.md'
+        echo "# Titulo" >> ~/Plantillas/'Documento md.md'
+        echo "### Sub titulo" >> ~/Plantillas/'Documento md.md'
+        echo "> Comentario" >> ~/Plantillas/'Documento md.md'
+        echo "* Vineta" >> ~/Plantillas/'Documento md.md'
+
+    tar -Jxvf plantillas.tar.xz -C ~/Plantillas
+echo " Se instalaron las plantillas en ~/Plantillas"
+
+    	cp config.fish ~/.config/fish/
+echo " Se intalo titulo de bienvenida para fish en ~/.config/fish/"
+
 echo " "
 	neofetch
 echo " "

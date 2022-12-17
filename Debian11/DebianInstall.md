@@ -326,8 +326,43 @@ Debian de base tiene instalado el paquete libfuse2 , Appimage no acepto el repos
 * Emoji selector
 * Desktop Clock (no es compatible)
 
-### Installar iconos de Yaru-NaturalGnome
 
-### Instalar Thema WhiteSur-gtk-theme.tar.x
+
+### Installar iconos de Yaru-NaturalGnome ✅
+* Yaru-NaturalGnome
+* Mkos-Big-Sur.tar.xz
+
+### Instalar Thema WhiteSur-gtk-theme.tar.x ✅
+
+	apt install git
+    git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+
+	cd WhiteSur-gtk-theme/
+    ./install.sh -t all -N glassy -s 220
+    ./tweaks.sh -g
+### instalar ordenes de plantillas. ✅
+Se nesesitan los sigientes archivos:
+
+* config.fish
+* plantillas.tar.xz
+
+Estos archivos deven estar en /home/usuario/ y abrir una termial en esta ubicacion y copiar y pegar en la terminal las siguientes instrucciones.
+``` bash
+#Seccion de instalaciones de Plantillas y complementos personalisados.
+    touch {$HOME}/Plantillas/'Documento txt.txt'
+        echo ". " >> {$HOME}/Plantillas/'Documento txt.txt'
+
+    touch {$HOME}/Plantillas/'Documento md.md'
+        echo "# Titulo" >> {$HOME}/Plantillas/'Documento md.md'
+        echo "### Sub titulo" >> {$HOME}/Plantillas/'Documento md.md'
+        echo "> Comentario" >> {$HOME}/Plantillas/'Documento md.md'
+        echo "* Vineta" >> {$HOME}/Plantillas/'Documento md.md'
+
+    tar -Jxvf plantillas.tar.xz -C {$HOME}/Plantillas
+echo " Se instalaron las plantillas en ~/Plantillas"
+
+    	cp config.fish {$HOME}/.config/fish/
+echo " Se intalo titulo de bienvenida para fish en ~/.config/fish/"
+```
 
 ### Instalar zsh y complementos.

@@ -45,3 +45,7 @@ echo " "
     sudo service smbd status
 
     sudo service proftpd status
+
+#muestra informacion del sistema
+    cat /etc/os-release
+    
