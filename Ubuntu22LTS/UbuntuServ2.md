@@ -1,6 +1,6 @@
 # Ubuntu Server 22:
 
-### 1. Instaciones, una ves instalado el sistema actialisar el sistemas:
+### 1. Instaciones, una ves instalado el sistema actialisar el sistemas: ✅
 
 	sudo apt update
   
@@ -8,11 +8,11 @@
   
 	sudo apt autoclean
   
-### 2. Instalamos el servisio SSH para la su administracion remota, asi podremos copiar y pegar comandos desde otro pc con asistencia grafica.
+### 2. Instalamos el servisio SSH para la su administracion remota, asi podremos copiar y pegar comandos desde otro pc con asistencia grafica. ✅
 
     sudo apt install ssh -y
 
-### 2.1 Revisamos el estabo del servicio , tendra que estar en enable.
+### 2.1 Revisamos el estabo del servicio , tendra que estar en enable. ✅
 
     sudo service ssh status
 

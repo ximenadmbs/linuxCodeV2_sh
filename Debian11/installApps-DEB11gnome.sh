@@ -49,7 +49,11 @@ echo " "
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
 	apt install flatpak -y
+	apt install gnome-software-plugin-flatpak -y
+	echo -e "\e[0;38;5;33m█ flatpak installed \e[0m"
+        sleep 1s
 	#apt install appimagelauncher -y
+	
 echo " "
 #Seccion de Instalacion de paquetes para la terminal:
 	apt install neofetch -y
@@ -58,8 +62,8 @@ echo " "
 	apt install htop -y
 	echo -e "\e[0;38;5;33m█ htop installed \e[0m"
         sleep 1s
-	apt install nmap -y
-	echo -e "\e[0;38;5;33m█ nmap installed \e[0m"
+	#apt install nmap -y
+	#echo -e "\e[0;38;5;33m█ nmap installed \e[0m"
         sleep 1s
 	apt install net-tools -y
 	echo -e "\e[0;38;5;33m█ net-tools installed \e[0m"

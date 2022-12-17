@@ -59,13 +59,14 @@ echo " "
     sudo apt install ssh -y
     sudo apt install net-tools -y
     sudo apt install samba -y
-    sudo apt install nmap -y
     sudo apt install htop -y
     sudo apt install bpytop -y
     sudo apt install lm-sensors -y
     sudo apt install cmatrix -y
+#deprecated
     #sudo apt install cmake -y
     #sudo apt install alien
+    #sudo apt install nmap -y
 echo " "
 
 #Seccion de Instalacion de apps de interfacegrafica:
