@@ -1,4 +1,4 @@
-# Ubuntu Server 22:
+# Ubuntu Server 22, y Xubuntu 22:
 
 ### 1. Instaciones, una ves instalado el sistema actialisar el sistemas: ✅
 
@@ -40,7 +40,6 @@ Copiamos y pegamos el contenido del archivo **installUbuntuServ.sh,** guardamos 
 * sudo add-apt-repository universe
 * sudo apt install ubuntu-restricted-extras -y
 * sudo apt install neofetch -y
-* sudo apt install nmap -y
 * sudo apt install samba -y
 * sudo apt install bpytop -y  (opcion)
 * sudo apt install lm-sensors -y
@@ -84,7 +83,7 @@ Revisamos el estado del servicio FTP:
 
 Modificaremos el archivo, creamos una copia de seguridad , borramos el contenido y pegaremos las siguientes lineas guardamos y cerramos recatamos el servicio.
 
-``` 
+``` bash
 Include /etc/proftpd/modules.conf
 UseIPv6 on
 <IfModule mod_ident.c>
@@ -150,7 +149,7 @@ DefaultRoot ~
 
 Pegar el contenido en el archivo
 
-```
+```bash
 # This is the network config written by 'subiquity'
 network:
   ethernets:
@@ -185,7 +184,7 @@ Abrimos el archivo de configuración para pegar los siguientes lineas.
 
 > Pegamos:
 
-```
+``` bash
 =====Share Definitions=====
 
 [sambaShare]
@@ -259,7 +258,7 @@ Donde montaremos la particion:  **/dev/sdd2**  de la sig forma:
 
 >linea de salida constestacion:
 
-```
+``` bash
 ximena@pc-amdfx:~$ sudo ntfsfix /dev/sdd2
 Mounting volume... OK
 Processing of $MFT and $MFTMirr completed successfully.
@@ -283,6 +282,18 @@ Para desmontar con el siguiente comando:
 
     sudo umount /dev/sde2
 
+### Instalar interfas grafica de Xubuntu
+
+    sudo apt install --no-install-recommends xubuntu-desktop
+
+### Instalar Aplicaxiones Xfce.
+``` bash
+#Tienda de aplicaciones de gnome**
+	sudo apt install gnome-software -y
+
+#Administrador de discos de Gnome**
+	sudo apt install gnome-disk-utility
+```
 ---------------------------------------
 jue 10 nov 2022 11:07:46 CST
 mar 06 dic 2022 13:17:46 CST
