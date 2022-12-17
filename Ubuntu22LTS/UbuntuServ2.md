@@ -8,16 +8,16 @@
   
 	sudo apt autoclean
   
-### 2. Instalamos el servisio SSH para la su administracion remota, asi podremos copiar y pegar comandos desde otro pc con asistencia grafica. ✅
+### 2. Instalamos el servisio SSH para la su administracion remota, asi podremos copiar y pegar comandos desde otro pc con asistencia grafica. ✅ ✅
 
     sudo apt install ssh -y
 
-### 2.1 Revisamos el estabo del servicio , tendra que estar en enable. ✅
+### 2.1 Revisamos el estabo del servicio , tendra que estar en enable. ✅ ✅
 
     sudo service ssh status
 
 ---------------------------------------
-## 3. Una ves en el terminal con asistencia grafica y conectado via remota con SSH seguiremos los sig pasos:
+## 3. Una ves en el terminal con asistencia grafica y conectado via remota con SSH seguiremos los sig pasos: ✅ ✅
 Crearremos un archivo de instrucciones para la instalacion de paquetes nesesarios.
 Dentro dela carpeta rais de usuario ~/ crearemos el siguiente archivo .sh
 
@@ -27,7 +27,7 @@ Dentro dela carpeta rais de usuario ~/ crearemos el siguiente archivo .sh
 
     sudo nano installUbuntuServ.sh
 
-Copiamos y pegamos el contenido del archivo **installUbuntuServ.sh,** guardamos y cerramos damos permisos de ejecucion, y ejecutamos las instrucciones con.
+Copiamos y pegamos el contenido del archivo **installUbuntuServ.sh, o installApps-XubuntuLTS.sh** guardamos y cerramos damos permisos de ejecucion, y ejecutamos las instrucciones con.
 
     sudo chmod 777 installUbuntuServ.sh
 
@@ -35,7 +35,7 @@ Copiamos y pegamos el contenido del archivo **installUbuntuServ.sh,** guardamos 
 
 
 ---------------------------------------
-## 4. Se instalaran los siguientes apps para el terminal.
+## 4. Se instalaran los siguientes apps para el terminal. ✅
 
 * sudo add-apt-repository universe
 * sudo apt install ubuntu-restricted-extras -y
@@ -43,7 +43,6 @@ Copiamos y pegamos el contenido del archivo **installUbuntuServ.sh,** guardamos 
 * sudo apt install samba -y
 * sudo apt install bpytop -y  (opcion)
 * sudo apt install lm-sensors -y
-* sudo apt install ssh -y
 * sudo apt install ufw -y
 * sudo apt install fish -y
 * sudo apt install htop -y
@@ -51,7 +50,7 @@ Copiamos y pegamos el contenido del archivo **installUbuntuServ.sh,** guardamos 
 * sudo apt install proftpd -y
 
 ---------------------------------------
-### 4.1 Revisamos el estabo del servicio , tendra que estar en enable.
+### 4.1 Revisamos el estabo del servicio , tendra que estar en enable. ✅
 
     sudo service smbd status
   
@@ -286,14 +285,6 @@ Para desmontar con el siguiente comando:
 
     sudo apt install --no-install-recommends xubuntu-desktop
 
-### Instalar Aplicaxiones Xfce.
-``` bash
-#Tienda de aplicaciones de gnome**
-	sudo apt install gnome-software -y
-
-#Administrador de discos de Gnome**
-	sudo apt install gnome-disk-utility
-```
 ---------------------------------------
 jue 10 nov 2022 11:07:46 CST
 mar 06 dic 2022 13:17:46 CST

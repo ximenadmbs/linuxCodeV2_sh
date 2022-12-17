@@ -35,8 +35,7 @@ echo -e "\e[0;38;5;135m██ Se actualiso los paquetes del sistema\e[0m"
 #espera 2 segundo
         sleep 2s
 
-    sudo add-apt-repository universe
-    #sudo add-apt-repository ppa:appimagelauncher-team/stable -y
+    sudo add-apt-repository universe -y
     sudo flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
     sudo apt update
 
@@ -50,12 +49,19 @@ echo " "
     sudo apt install ubuntu-restricted-extras -y
     echo -e "\e[0;38;5;135m█ ubuntu-restricted-extras installed \e[0m"
         sleep 1s
-    #sudo apt install gnome-software-plugin-flatpak -y
-    #sudo apt install flatpak -y
+    sudo apt install gnome-software -y
+    echo -e "\e[0;38;5;135m█ gnome-software installed \e[0m"
+        sleep 1s
+    sudo apt install flatpak -y
+    echo -e "\e[0;38;5;135m█ flatpak installed \e[0m"
+        sleep 1s
+    sudo apt install gnome-software-plugin-flatpak -y
+    echo -e "\e[0;38;5;135m█ gnome-software-plugin-flatpak installed \e[0m"
+        sleep 1s
 
 echo " "
 #Seccion de Instalacion de paquetes para la terminal:
-    ssudo apt install neofetch -y
+    sudo apt install neofetch -y
 	echo -e "\e[0;38;5;135m█ neofetch installed \e[0m"
         sleep 1s
     sudo apt install htop -y
@@ -79,9 +85,28 @@ echo " "
     sudo apt install lm-sensors -y
 	echo -e "\e[0;38;5;135m█ lm-sensors installed \e[0m"
         sleep 1s
-    sudo apt install ssh -y
-    echo -e "\e[0;38;5;135m█ ssh installed \e[0m"
+    sudo apt install proftpd -y
+    echo -e "\e[0;38;5;135m█ proftpd FTP \e[0m"
         sleep 1s
+#Administrador de discos de Gnome**
+	sudo apt install gnome-disk-utility -y
+    echo -e "\e[0;38;5;135m█ gnome-disk-utility installed \e[0m"
+        sleep 1s
+
+#Instalacion de plex media server
+    #seccion de instalacion de herramintas nesesarias:
+        sudo apt install apt-transport-https curl wget -y
+
+    #Se bajaran los ficheros nesesarios:
+        sudo wget -O- https://downloads.plex.tv/plex-keys/PlexSign.key | gpg --dearmor | sudo tee /usr/share/keyrings/plex.gpg
+        echo deb [signed-by=/usr/share/keyrings/plex.gpg] https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
+
+    #se actualisara el sistema para la detencion de ficheros y se instalara el paquete.
+        sudo apt update
+        sudo apt install plexmediaserver -y
+
+        echo -e "\e[0;38;5;135m█ plexmediaserver installed \e[0m"
+            sleep 1s
 echo " "
     neofetch
 echo " "
