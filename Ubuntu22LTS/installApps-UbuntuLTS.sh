@@ -155,7 +155,7 @@ echo " "
 echo " Instalando de bienvenida para fish en ~/.config/fish/"
 echo " "
 echo -e "\e[0;38;5;208m█ Se instalaron las plantillas\e[0m"
-            sleep s
+            sleep 1s
 echo " "
     neofetch
 echo " "
