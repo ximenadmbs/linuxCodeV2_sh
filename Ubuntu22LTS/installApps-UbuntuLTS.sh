@@ -21,70 +21,125 @@ echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
 echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
-echo -e "\e[0;38;5;135m[Actualisador e intalador de completentos v1.2 para Ubuntu, se iniciara la instalacion.]\e[0m"
+echo -e "\e[0;38;5;208m[Actualisador e intalador de completentos para Ubuntu LTS.\e[0m"
+echo -e "\e[0;38;5;208m[Se iniciara la instalacion.]\e[0m"
+#espera 1 segundo
+        sleep 2s
 echo " "
 #Seccion de instalacion de actualisaciones:
-    sudo apt update
+ 	sudo apt update
     sudo apt upgrade -y
+	sudo apt autoclean
 echo " "
-echo -e "\e[0;38;5;135m[ ██ Se actualiso los paquetes del sistema\e[0m"
-    sudo apt-get autoclean
-echo " "
+echo -e "\e[0;38;5;208m██ Se actualiso los paquetes del sistema\e[0m"
+#espera 2 segundo
+        sleep 2s
 
 #Seccion de Instalacion de repositorios:
-    sudo add-apt-repository universe
+    sudo add-apt-repository universe -y
     sudo add-apt-repository ppa:appimagelauncher-team/stable -y
     sudo flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
     sudo apt update
+
 echo " "
-echo -e "\e[0;38;5;135m[ ██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
+echo -e "\e[0;38;5;208m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
 echo " "
+        sleep 1s
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
     sudo apt install gnome-tweaks -y
-    sudo gnome-shell-extensions -y
+    echo -e "\e[0;38;5;208m█ gnome-tweaks installed \e[0m"
+        sleep 1s
+    sudo apt install gnome-shell-extensions -y
+    echo -e "\e[0;38;5;208m█ gnome-shell-extensions installed \e[0m"
+        sleep 1s
     sudo apt install ubuntu-restricted-extras -y
+    echo -e "\e[0;38;5;208m█ ubuntu-restricted-extras installed \e[0m"
+        sleep 1s
     sudo apt install gnome-software -y
+    echo -e "\e[0;38;5;208m█ gnome-software installed \e[0m"
+        sleep 1s
     sudo apt install gnome-software-plugin-flatpak -y
+    echo -e "\e[0;38;5;208m█ gnome-software-plugin-flatpak installed \e[0m"
+        sleep 1s
     sudo apt install libfuse2 -y
+    echo -e "\e[0;38;5;208m█ libfuse2 installed \e[0m"
+        sleep 1s
     sudo apt install appimagelauncher -y
+    echo -e "\e[0;38;5;208m█ appimagelauncher installed \e[0m"
+        sleep 1s
     sudo apt install flatpak -y
+    echo -e "\e[0;38;5;208m█ flatpak installed \e[0m"
+        sleep 1s
 echo " "
-echo -e "\e[0;38;5;135m[ ██ Se ha instaladoo la tienda de aplicaciones, y componetes de sistema\e[0m"
+echo -e "\e[0;38;5;208m██ Se ha instaladoo la tienda de aplicaciones, y componetes de sistema\e[0m"
 echo " "
 
 #Seccion de Instalacion de paquetes para la terminal:
     sudo apt install neofetch -y
+    cho -e "\e[0;38;5;208m█ neofetch installed \e[0m"
+        sleep 1s
     sudo apt install fish -y
+    echo -e "\e[0;38;5;208m█ fish installed \e[0m"
+        sleep 1s
     sudo apt install ssh -y
+    echo -e "\e[0;38;5;208m█ ssh installed \e[0m"
+        sleep 1s
     sudo apt install net-tools -y
-    sudo apt install samba -y
+    echo -e "\e[0;38;5;208m█ net-tools installed \e[0m"
+        sleep 1s
     sudo apt install htop -y
+    echo -e "\e[0;38;5;208m█ htop installed \e[0m"
+        sleep 1s
     sudo apt install bpytop -y
+    echo -e "\e[0;38;5;208m█ bpytop installed \e[0m"
+        sleep 1s
     sudo apt install lm-sensors -y
+    echo -e "\e[0;38;5;208m█ lm-sensors installed \e[0m"
+        sleep 1s
     sudo apt install cmatrix -y
+    echo -e "\e[0;38;5;208m█ cmatrix installed \e[0m"
+        sleep 1s
 #deprecated
     #sudo apt install cmake -y
     #sudo apt install alien
     #sudo apt install nmap -y
-echo " "
+    #sudo apt install samba -y
 
 #Seccion de Instalacion de apps de interfacegrafica:
-    sudo apt install cups-pdf
-    sudo apt install font-manager
+    sudo apt install cups-pdf -y
+    echo -e "\e[0;38;5;208m█ cups-pdf installed \e[0m"
+        sleep 1s
+    sudo apt install font-manager -y
+    echo -e "\e[0;38;5;208m█ font-manager installed \e[0m"
+        sleep 1s
+echo " "
+
     #sudo apt install python3-pip libqt5gui5 libqt5widgets5 qt5-gtk-platformtheme libqt5x11extras5 libqt5svg5 libqt5dbus5 sqlite3 -y
     #sudo pip3 install bauh -y
 
-    #Flatpak (si lansan error de instalacion reiniciar el sistema)
-        flatpak install flathub com.mattjakeman.ExtensionManager -y
-        flatpak install flathub org.videolan.VLC -y
-        flatpak install flathub io.github.hakandundar34coding.system-monitoring-center -y
-        flatpak install flathub nl.hjdskes.gcolor3 -y
+#Instalación de Paquetería Flatpak (si lanzan error de instalación reiniciar el instalador)
+	echo -e "\e[0;38;5;208m█ Instalación de Paquetería Flatpak (si lanzan error de instalación reiniciar el .sh\e[0m"
+        sleep 2s
+        sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
+        echo -e "\e[0;38;5;208m█ flatpak ExtensionManager installed \e[0m"
+            sleep 1s
+        sudo flatpak install flathub org.videolan.VLC -y
+        echo -e "\e[0;38;5;208m█ flatpak VLC installed \e[0m"
+            sleep 1s
+        sudo flatpak install flathub io.github.hakandundar34coding.system-monitoring-center -y
+        echo -e "\e[0;38;5;208m█ flatpak system-monitoring-center installed \e[0m"
+            sleep 1s
+        sudo flatpak install flathub nl.hjdskes.gcolor3 -y
+        echo -e "\e[0;38;5;208m█ flatpak gcolor3 installed \e[0m"
+            sleep 1s
+echo " "
 
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
     #sudo apt install plank -y
 
 #Seccion de instalaciones de Plantillas y complementos personalisados.
+    echo " Instalando las plantillas en ~/Plantillas"
     touch ~/Plantillas/'Documento txt.txt'
         echo ". " >> ~/Plantillas/'Documento txt.txt'
 
@@ -95,11 +150,12 @@ echo " "
         echo "* Vineta" >> ~/Plantillas/'Documento md.md'
 
     tar -Jxvf plantillas.tar.xz -C ~/Plantillas
-echo " Se instalaron las plantillas en ~/Plantillas"
 
     	cp config.fish ~/.config/fish/
-echo " Se intalo titulo de bienvenida para fish en ~/.config/fish/"
-
+echo " Instalando de bienvenida para fish en ~/.config/fish/"
+echo " "
+echo -e "\e[0;38;5;208m█ Se instalaron las plantillas\e[0m"
+            sleep s
 echo " "
     neofetch
 echo " "
@@ -122,7 +178,8 @@ echo -e "\e[0;38;5;159m          .;A    I            ..;I'                      
 echo -e "\e[0;38;5;159m       .*'   '';I..       ..;;I'    \e[0m"
 echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
-echo -e "\e[0;38;5;135m[ ██ :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
+echo -e "\e[0;38;5;208m██ :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
+echo -e "\e[0;38;5;208m[Reinicia el sistema antes de usar los paquetes instalados de Flatpak.]\e[0m"
     date
 echo " "
 
@@ -135,3 +192,4 @@ echo " "
 # mar 01 nov 2022 13:01:05 CST
 # mié 30 nov 2022 12:57:06 CST
 # dom 04 dic 2022 13:20:49 CST
+# sáb 17 dic 2022 19:14:01 CST

@@ -49,3 +49,6 @@ echo " "
 #muestra informacion del sistema
     cat /etc/os-release
     
+
+#revisar si opengl esta activado
+    glxinfo | grep direct

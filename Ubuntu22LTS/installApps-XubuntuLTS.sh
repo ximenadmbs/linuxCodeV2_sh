@@ -21,7 +21,7 @@ echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
 echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
-echo -e "\e[0;38;5;135m Instalador de completentos de servicor Xubuntu server escritorio.\e[0m"
+echo -e "\e[0;38;5;135m Instalador de completentos para servidor Xubuntu xfce\e[0m"
 echo -e "\e[0;38;5;135m [Se iniciara la instalacion.]\e[0m"
 #espera 1 segundo
         sleep 2s
