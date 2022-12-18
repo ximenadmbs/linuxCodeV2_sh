@@ -19,6 +19,7 @@ echo ""
 echo "██ Se actualisaron los paquetes seleccionados"
 echo "."
     sudo apt autoclean
+    sudo apt autoremove
 echo ""
 echo "██ ::::::::::Tareas terminadas::::::::::"
 echo " "
