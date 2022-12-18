@@ -33,11 +33,13 @@ echo " "
 echo -e "\e[0;38;5;75m██ Se actualiso los paquetes del sistema\e[0m"
 #espera 2 segundo
         sleep 2s
+
 #Seccion de Instalacion de repositorios:
-#echo " "
-#echo -e "\e[0;38;5;208m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
-#echo " "
-#        sleep 1s
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+echo " "
+echo -e "\e[0;38;5;75m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
+echo " "
+        sleep 1s
 echo " "
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
@@ -45,7 +47,7 @@ echo " "
     echo -e "\e[0;38;5;75m█ gnome-tweaks installed \e[0m"
         sleep 1s
 echo " "
-echo -e "\e[0;38;5;75m██ Se ha instalo componetes de sistema"
+echo -e "\e[0;38;5;75m██ Se ha instalo componetes de sistema \e[0m"
 echo " "
 
 #Seccion de Instalacion de paquetes para la terminal:
@@ -67,6 +69,7 @@ echo " "
     sudo dnf install fish -y
     echo -e "\e[0;38;5;75m█ fish installed \e[0m"
         sleep 1s
+echo " "
 # ssh ya instalado, activarlo:
 	systemctl start sshd.service
     echo -e "\e[0;38;5;75m█ sshd service active \e[0m"
@@ -74,11 +77,11 @@ echo " "
 
 #Seccion de Instalacion de apps de interfacegrafica:
     sudo dnf install cups-pdf -y
-    echo -e "\e[0;38;5;75m█ sshd service active \e[0m"
+    echo -e "\e[0;38;5;75m█ cups-pdf installed \e[0m"
         sleep 1s
 echo " "
 #Instalación de Paquetería Flatpak (Fedora 37 ya cuenta con flatpak)
-    echo -e "\e[0;38;5;75m█ Instalación de Paquetería Flatpak.\e[0m"
+    echo -e "\e[0;38;5;75m██ Instalación de Paquetería Flatpak.\e[0m"
             sleep 2s
         flatpak install flathub com.mattjakeman.ExtensionManager -y
         echo -e "\e[0;38;5;75m█ Extension Manager installed \e[0m"
@@ -90,19 +93,19 @@ echo " "
         echo -e "\e[0;38;5;75m█ system-monitoring-center installed \e[0m"
             sleep 1s
         flatpak install flathub nl.hjdskes.gcolor3 -y
-        echo -e "\e[0;38;5;75m█ fish installed \e[0m"
+        echo -e "\e[0;38;5;75m█ gcolor3 installed \e[0m"
             sleep 1s
         flatpak install flathub org.gnome.FontManager -y
-        echo -e "\e[0;38;5;75m█ fish installed \e[0m"
+        echo -e "\e[0;38;5;75m█ FontManager installed \e[0m"
             sleep 1s
 echo " "
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
     #sudo dnf install plank -y
 
-echo "."
-neofetch
-echo "██ :::::Se acompleto la tarea de instalacion:::::]]]]"
-date
+echo " "
+    neofetch
+echo -e "\e[0;38;5;75m██ :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
+    date
 echo " "
 
 #Notas: para busquedas de paquetes rpm del repositorio [dnf search paquete] 
