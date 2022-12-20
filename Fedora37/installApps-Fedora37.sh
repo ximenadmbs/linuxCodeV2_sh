@@ -115,7 +115,6 @@ echo " "
 
     tar -Jxvf plantillas.tar.xz -C ~/Plantillas
 
-
     	cp -r fish/ ~/.config/
 echo " Instalando de bienvenida para fish en ~/.config/fish/"
 echo " "
