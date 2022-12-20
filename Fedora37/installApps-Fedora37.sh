@@ -21,7 +21,7 @@ echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
 echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
-echo -e "\e[0;38;5;75m[Actualisador e intalador de completentos para Fedora37.\e[0m"
+echo -e "\e[0;38;5;75m[Actualisador e intalador de completentos para Fedora36, 37.\e[0m"
 echo -e "\e[0;38;5;75m[Se iniciara la instalacion.]\e[0m"
 #espera 1 segundo
         sleep 2s
@@ -35,7 +35,7 @@ echo -e "\e[0;38;5;75m██ Se actualiso los paquetes del sistema\e[0m"
         sleep 2s
 
 #Seccion de Instalacion de repositorios:
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 echo " "
 echo -e "\e[0;38;5;75m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
 echo " "
@@ -52,7 +52,7 @@ echo " "
 
 #Seccion de Instalacion de paquetes para la terminal:
     sudo dnf install neofetch -y
-    echo -e "\e[0;38;5;75m█ gnome-tweaks installed \e[0m"
+    echo -e "\e[0;38;5;75m█ neofetch installed \e[0m"
         sleep 1s
     sudo dnf install htop -y
     echo -e "\e[0;38;5;75m█ htop installed \e[0m"
@@ -102,6 +102,25 @@ echo " "
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
     #sudo dnf install plank -y
 
+#Seccion de instalaciones de Plantillas y complementos personalisados.
+    echo " Instalando las plantillas en ~/Plantillas"
+    touch ~/Plantillas/'Documento txt.txt'
+        echo ". " >> ~/Plantillas/'Documento txt.txt'
+
+    touch ~/Plantillas/'Documento md.md'
+        echo "# Titulo" >> ~/Plantillas/'Documento md.md'
+        echo "### Sub titulo" >> ~/Plantillas/'Documento md.md'
+        echo "> Comentario" >> ~/Plantillas/'Documento md.md'
+        echo "* Vineta" >> ~/Plantillas/'Documento md.md'
+
+    tar -Jxvf plantillas.tar.xz -C ~/Plantillas
+
+
+    	cp -r fish/ ~/.config/
+echo " Instalando de bienvenida para fish en ~/.config/fish/"
+echo " "
+echo -e "\e[0;38;5;75m█ Se instalaron las plantillas\e[0m"
+            sleep 1s
 echo " "
     neofetch
 echo -e "\e[0;38;5;75m██ :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
