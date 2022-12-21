@@ -53,6 +53,11 @@ echo " "
 #revisar si opengl esta activado
     glxinfo | grep direct
 
+#estado de livepatch de ubuntu
+    sudo ua status --wait
+
+    pro security-status
+
 
 Leyendo lista de paquetes... Hecho
 Creando árbol de dependencias... Hecho
