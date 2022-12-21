@@ -21,9 +21,9 @@ echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
 echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
-echo -e "\e[0;38;5;33m[Intalador de completentos para Debian11 gnome v1.1 ]\e[0m"
-echo -e "\e[0;38;5;33m[Se recomienda ejecutar estas instrucciones como super usuario,"
-echo -e "\e[0;38;5;33m[Se iniciara la instalacion.]\e[0m"
+echo -e "\e[0;38;5;125m[Intalador de completentos para Debian11 gnome v1.1 ]\e[0m"
+echo -e "\e[0;38;5;125m[Se recomienda ejecutar estas instrucciones como super usuario,"
+echo -e "\e[0;38;5;125m[Se iniciara la instalacion.]\e[0m"
 #espera 1 segundo
         sleep 2s
 echo " "
@@ -32,7 +32,7 @@ echo " "
     apt upgrade -y
 	apt autoclean
 echo " "
-echo -e "\e[0;38;5;33m██ Se actualiso los paquetes del sistema\e[0m"
+echo -e "\e[0;38;5;125m██ Se actualiso los paquetes del sistema\e[0m"
 #espera 2 segundo
         sleep 2s
 
@@ -43,74 +43,76 @@ echo -e "\e[0;38;5;33m██ Se actualiso los paquetes del sistema\e[0m"
 
 #appimagelauncher no es nesesario en xfce y genome debian11
 echo " "
-echo -e "\e[0;38;5;33m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
+echo -e "\e[0;38;5;125m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
 echo " "
         sleep 1s
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
 	apt install flatpak -y
 	apt install gnome-software-plugin-flatpak -y
-	echo -e "\e[0;38;5;33m█ flatpak installed \e[0m"
+	echo -e "\e[0;38;5;125m█ flatpak installed \e[0m"
         sleep 1s
 	#apt install appimagelauncher -y
 	
 echo " "
 #Seccion de Instalacion de paquetes para la terminal:
 	apt install neofetch -y
-	echo -e "\e[0;38;5;33m█ neofetch installed \e[0m"
+	echo -e "\e[0;38;5;125m█ neofetch installed \e[0m"
         sleep 1s
 	apt install htop -y
-	echo -e "\e[0;38;5;33m█ htop installed \e[0m"
+	echo -e "\e[0;38;5;125m█ htop installed \e[0m"
         sleep 1s
 	#apt install nmap -y
-	#echo -e "\e[0;38;5;33m█ nmap installed \e[0m"
+	#echo -e "\e[0;38;5;125m█ nmap installed \e[0m"
         sleep 1s
 	apt install net-tools -y
-	echo -e "\e[0;38;5;33m█ net-tools installed \e[0m"
+	echo -e "\e[0;38;5;125m█ net-tools installed \e[0m"
         sleep 1s
 	apt install samba -y
-	echo -e "\e[0;38;5;33m█ samba installed \e[0m"
+	echo -e "\e[0;38;5;125m█ samba installed \e[0m"
         sleep 1s
 	apt install ufw -y
-	echo -e "\e[0;38;5;33m█ ufw installed \e[0m"
+	echo -e "\e[0;38;5;125m█ ufw installed \e[0m"
         sleep 1s
 	apt install bpytop -y
-	echo -e "\e[0;38;5;33m█ bpytop installed \e[0m"
+	echo -e "\e[0;38;5;125m█ bpytop installed \e[0m"
         sleep 1s
 	apt install fish -y
-	echo -e "\e[0;38;5;33m█ fish installed \e[0m"
+	echo -e "\e[0;38;5;125m█ fish installed \e[0m"
         sleep 1s
 	apt install lm-sensors -y
-	echo -e "\e[0;38;5;33m█ lm-sensors installed \e[0m"
+	echo -e "\e[0;38;5;125m█ lm-sensors installed \e[0m"
         sleep 1s
 
 #Seccion de Instalacion de apps de interfacegrafica:
 	apt-get install cups-pdf
-	echo -e "\e[0;38;5;33m█ cups-pdf installed \e[0m"
+	echo -e "\e[0;38;5;125m█ cups-pdf installed \e[0m"
         sleep 1s
 	apt install font-manager -y
-	echo -e "\e[0;38;5;33m█ font-manager installed \e[0m"
+	echo -e "\e[0;38;5;125m█ font-manager installed \e[0m"
         sleep 1s
 echo " "
 
 	#Instalación de Paquetería Flatpak (si lanzan error de instalación reiniciar el instalador)
-	echo -e "\e[0;38;5;33m█ Instalación de Paquetería Flatpak (si lanzan error de instalación reiniciar el .sh\e[0m"
+	echo -e "\e[0;38;5;125m█ Instalación de Paquetería Flatpak (si lanzan error de instalación reiniciar el .sh\e[0m"
         sleep 2s
         flatpak install flathub com.mattjakeman.ExtensionManager -y
-		echo -e "\e[0;38;5;33m█ Flatpak ExtensionManager installed \e[0m"
+		echo -e "\e[0;38;5;125m█ Flatpak ExtensionManager installed \e[0m"
         	sleep 1s
         flatpak install flathub org.videolan.VLC -y
-		echo -e "\e[0;38;5;33m█ Flatpak VLC installed \e[0m"
+		echo -e "\e[0;38;5;125m█ Flatpak VLC installed \e[0m"
         	sleep 1s
         flatpak install flathub io.github.hakandundar34coding.system-monitoring-center -y
-		echo -e "\e[0;38;5;33m█ Flatpak system-monitoring-center installed \e[0m"
+		echo -e "\e[0;38;5;125m█ Flatpak system-monitoring-center installed \e[0m"
         	sleep 1s
         flatpak install flathub nl.hjdskes.gcolor3 -y
-		echo -e "\e[0;38;5;33m█ Flatpak gcolor3 installed \e[0m"
+		echo -e "\e[0;38;5;125m█ Flatpak gcolor3 installed \e[0m"
         	sleep 1s
 		
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
-	#apt install plank -y
+		#apt install plank -y
+		#echo -e "\e[0;38;5;125m█ plank installed \e[0m"
+				#sleep 1s
 echo " "
 	neofetch
 echo " "
@@ -133,8 +135,8 @@ echo -e "\e[0;38;5;159m          .;A    I            ..;I'                      
 echo -e "\e[0;38;5;159m       .*'   '';I..       ..;;I'    \e[0m"
 echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
-echo -e "\e[0;38;5;33m[ ██ :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
-echo -e "\e[0;38;5;33m[ Reinicia el sistema antes de usar los paquetes instalados de Flatpak.]\e[0m"
+echo -e "\e[0;38;5;125m[ ██ :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
+echo -e "\e[0;38;5;125m[ Reinicia el sistema antes de usar los paquetes instalados de Flatpak.]\e[0m"
 	date
 echo " "
 

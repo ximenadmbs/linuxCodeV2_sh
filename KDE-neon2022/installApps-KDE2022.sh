@@ -21,14 +21,14 @@ echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
 echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
-    echo -e "\e[0;38;5;129m Edicion KDE neon \e[0m"
-echo -e "\e[0;38;5;209m[Actualisador e intalador de completentos v1.2, se iniciara la instalacion.]\e[0m"
+    echo -e "\e[0;38;5;37m Edicion KDE neon \e[0m"
+    echo -e "\e[0;38;5;37m [Actualisador e intalador de completentos, se iniciara la instalacion.]\e[0m"
 echo " "
 #Seccion de instalacion de actualisaciones:
-    pkcon refresh
-    pkcon update -y
+    sudo pkcon refresh
+    sudo pkcon update -y
 echo " "
-echo -e "\e[0;38;5;200m[ ██ Se actualiso los paquetes del sistema\e[0m"
+echo -e "\e[0;38;5;37m[ ██ Se actualiso los paquetes del sistema\e[0m"
 echo " "
 
 #Seccion de Instalacion de repositorios:
@@ -37,38 +37,74 @@ echo " "
     sudo apt update
     pkcon refresh
 echo " "
-echo -e "\e[0;38;5;209m[ ██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
+echo -e "\e[0;38;5;37m[ ██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
 echo " "
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
     sudo apt install ubuntu-restricted-extras -y
+    echo -e "\e[0;38;5;37m█ ubuntu-restricted-extras installed \e[0m"
+        	sleep 1s
     sudo apt install libfuse2 -y
+    echo -e "\e[0;38;5;37m█ libfuse2 installed \e[0m"
+        	sleep 1s
     sudo apt install appimagelauncher -y
+    echo -e "\e[0;38;5;37m█ appimagelauncher installed \e[0m"
+        	sleep 1s
 echo " "
-echo -e "\e[0;38;5;209m[ ██ Se ha instalado componetes de sistema\e[0m"
+echo -e "\e[0;38;5;37m[ ██ Se ha instalado componetes de sistema\e[0m"
 echo " "
 
 #Seccion de Instalacion de paquetes para la terminal:
     sudo apt install neofetch -y
+    echo -e "\e[0;38;5;37m█ neofetch installed \e[0m"
+        	sleep 1s
     sudo apt install fish -y
+    echo -e "\e[0;38;5;37m█ fish installed \e[0m"
+        	sleep 1s
     sudo apt install ssh -y
+    echo -e "\e[0;38;5;37m█ ssh installed \e[0m"
+        	sleep 1s
     sudo apt install net-tools -y
+    echo -e "\e[0;38;5;37m█ net-tools installed \e[0m"
+        	sleep 1s
     sudo apt install samba -y
-    sudo apt install nmap -y
+    echo -e "\e[0;38;5;37m█ samba installed \e[0m"
+        	sleep 1s
     sudo apt install htop -y
+    echo -e "\e[0;38;5;37m█ htop installed \e[0m"
+        	sleep 1s
     sudo apt install bpytop -y
+    echo -e "\e[0;38;5;37m█ bpytop installed \e[0m"
+        	sleep 1s
     sudo apt install lm-sensors -y
+    echo -e "\e[0;38;5;37m█ lm-sensors installed \e[0m"
+        	sleep 1s
 echo " "
 
 #Seccion de Instalacion de apps de interfacegrafica:
-    sudo apt-get install cups-pdf
-    sudo apt install xserver-xorg-input-synaptics
-    sudo apt install tilix
-    sudo apt install kcalc
+    sudo apt-get install cups-pdf -y
+    echo -e "\e[0;38;5;37m█ cups-pdf installed \e[0m"
+        	sleep 1s
+    sudo apt install xserver-xorg-input-synaptics -y
+    echo -e "\e[0;38;5;37m█ xserver-xorg-input-synaptics installed \e[0m"
+        	sleep 1s
+    sudo apt install tilix -y
+    echo -e "\e[0;38;5;37m█ tilix installed \e[0m"
+        	sleep 1s
+    sudo apt install kcalc -y
+    echo -e "\e[0;38;5;37m█ kcalc installed \e[0m"
+        	sleep 1s
+echo " "
 
     #Flatpak (si lansan error de instalacion reiniciar el sistema)
+    echo -e "\e[0;38;5;208m█ Instalación de Paquetería Flatpak.\e[0m"
+        sleep 2s
         flatpak install flathub io.github.hakandundar34coding.system-monitoring-center -y
+        echo -e "\e[0;38;5;37m█ system-monitoring-center installed \e[0m"
+        	sleep 1s
         flatpak install flathub nl.hjdskes.gcolor3 -y
+        echo -e "\e[0;38;5;37m█ gcolor3 installed \e[0m"
+        	sleep 1s
 
 #El escritirio tiene que ser Xorg, para el funcionaminto de plank, tambien para el funcionaminto de xset led3
     #sudo apt install plank -y
@@ -94,7 +130,7 @@ echo -e "\e[0;38;5;159m          .;A    I            ..;I'                      
 echo -e "\e[0;38;5;159m       .*'   '';I..       ..;;I'    \e[0m"
 echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
-echo -e "\e[0;38;5;209m[ ██ Se acompleto la tarea de instalacion de KDE neon]\e[0m"
+echo -e "\e[0;38;5;37m[ ██ Se acompleto la tarea de instalacion de KDE neon]\e[0m"
     date
 echo " "
 
