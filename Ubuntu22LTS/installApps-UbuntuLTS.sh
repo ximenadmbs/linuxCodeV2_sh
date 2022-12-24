@@ -152,10 +152,42 @@ echo " "
     tar -Jxvf plantillas.tar.xz -C ~/Plantillas
 
     	cp -r fish/ ~/.config/
-echo " Instalando de bienvenida para fish en ~/.config/fish/"
+    echo " Instalando de bienvenida para fish en ~/.config/fish/"
+echo " "
+        echo -ne '[#---------------------------------] ( 03%)\r'
+sleep 0.1
+        echo -ne '[#########-------------------------] ( 24%)\r'
+sleep 0.1
+        echo -ne '[##################----------------] ( 51%)\r'
+sleep 0.1
+        echo -ne '[##########################--------] ( 75%)\r'
+sleep 0.1
+        echo -ne '[##################################] (100%)\r'
+sleep 0.1
+        echo -ne '\n'
 echo " "
 echo -e "\e[0;38;5;208m█ Se instalaron las plantillas\e[0m"
             sleep 1s
+echo " "
+echo -ne 'Terminando: - \r'
+    sleep 0.3
+echo -ne 'Terminando: \ \r'
+    sleep 0.3
+echo -ne 'Terminando: | \r'
+    sleep 0.3
+echo -ne 'Terminando: / \r'
+    sleep 0.3
+echo -ne 'Terminando: - \r'
+    sleep 0.3
+echo -ne 'Terminando: \ \r'
+    sleep 0.3
+echo -ne 'Terminando: | \r'
+    sleep 0.3
+echo -ne 'Terminando: / \r'
+    sleep 0.3
+echo -ne 'Terminando: OK \r'
+    sleep 1s
+echo -ne '\n'
 echo " "
     neofetch
 echo " "
