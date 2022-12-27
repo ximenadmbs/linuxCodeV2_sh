@@ -2,256 +2,499 @@
 
 #y comprobamos el estado de networking
     systemctl status networking
-
+sleep 1s
 #busqueda de paquetes en apt.
     apt search suld-driver
+    sleep 1s
     apt search neofetch
+    sleep 1s
     apt search htop
+    sleep 1.5
 
 #muestra detalles sobre tu distribución de Linux
     lsb_release -a
 echo " "
+sleep 2s
 #se muestra uso de la memoria del sistema.
     free -h
         #espera 1 segundo
         sleep 1s
 echo " "
-#se muestra el uso de los discons en el sistema
+#se muestra el uso de los discos en el sistema
     df -h
         sleep 1s
 echo " "
 #se muestra la ip del equipo
     ip a
-        sleep 1s
+        sleep 2s
 echo " "
 #demuestra coneccion a internet
     ping -c 5 google.com
 echo " "
+
+#barra de busqueda:
+echo -ne '[#----------------------------------] ( 01%)\r'
+    sleep 0.3
+echo -ne '[#######----------------------------] ( 20%)\r'
+    sleep 0.3
+echo -ne '[##############---------------------] ( 40%)\r'
+    sleep 0.3
+echo -ne '[#####################--------------] ( 60%)\r'
+    sleep 0.3
+echo -ne '[############################-------] ( 80%)\r'
+    sleep 0.3
+echo -ne '[###################################] (100%)\r'
+    sleep 0.3
+echo -ne '\n'
+echo " "
+
 #muestra las verciones de las siguientes aplicaciones de terminal.
     dpkg --version
+    echo " "
+    sleep 1s
     neofetch --version
+    echo " "
+    sleep 1s
     htop --version
-    nmap --version
+    echo " "
+    sleep 1s
+    #nmap --version
+    echo " "
+    sleep 1s
     cmatrix --version
+    echo " "
+    sleep 1s
     net-tools --version
+    echo " "
+    sleep 1s
     samba --version
+    echo " "
+    sleep 1s
     bpytop --version
+    echo " "
+    sleep 1s
     fish --version
-    lm-sensors --version
-    sl --version
+    echo " "
+    sleep 1s
+    #lm-sensors --version
+    echo " "
+    sleep 1s
+    #sl --version
+    echo " "
+    sleep 1s
     figlet --version
+    echo " "
+    sleep 1s
     ssh --version
+    echo " "
+    sleep 1.5
 
-    sudo service smbd status
-
-    sudo service proftpd status
+#estados de servicios:
+    #sudo service smbd status
+    #sudo service proftpd status
 
 #muestra informacion del sistema
+echo " "
     cat /etc/os-release
-    
-
+    sleep 1s
 #revisar si opengl esta activado
+echo " "
     glxinfo | grep direct
-
+sleep 1s
 #estado de livepatch de ubuntu
-    sudo ua status --wait
-
+echo " "
+    #sudo ua status --wait
     pro security-status
+sleep 1.5s
 
+#barra de busqueda:
+echo -ne '[#----------------------------------] ( 01%)\r'
+    sleep 0.3
+echo -ne '[#######----------------------------] ( 20%)\r'
+    sleep 0.3
+echo -ne '[##############---------------------] ( 40%)\r'
+    sleep 0.3
+echo -ne '[#####################--------------] ( 60%)\r'
+    sleep 0.3
+echo -ne '[############################-------] ( 80%)\r'
+    sleep 0.3
+echo -ne '[###################################] (100%)\r'
+    sleep 0.3
+echo -ne '\n'
+echo " "
 
-Leyendo lista de paquetes... Hecho
-Creando árbol de dependencias... Hecho
-Leyendo la información de estado... Hecho
-No se pudieron instalar algunos paquetes. Esto puede significar que
-usted pidió una situación imposible o, si está usando la distribución
-inestable, que algunos paquetes necesarios aún no se han creado o se
-han sacado de «Incoming».
-La siguiente información puede ayudar a resolver la situación:
+echo "Leyendo lista de paquetes... Hecho"
+echo "Creando árbol de dependencias... Hecho"
+echo "Leyendo la información de estado... Hecho"
+sleep 0.5
+echo "Se instalarán los siguientes paquetes NUEVOS:"
+sleep 0.8
+echo "  linux-image-5.10.0-20-amd64"
+echo "Se actualizarán los siguientes paquetes:"
+sleep 0.5
+echo "  base-files distro-info-data grub-common grub-pc grub-pc-bin grub2-common libnftables1 libtasn1-6"
+echo "  linux-image-amd64 nano nftables"
+echo "11 actualizados, 1 nuevos se instalarán, 0 para eliminar y 0 no actualizados."
+sleep 1
+echo "Se necesita descargar 61.1 MB de archivos."
+echo "Se utilizarán 318 MB de espacio de disco adicional después de esta operación."
+sleep 0.5
+echo ""
 
-Los siguientes paquetes tienen dependencias incumplidas:
- gcr : Depende: default-dbus-session-bus o
-                dbus-session-bus
- gnome-applets : Depende: upower pero no es instalable
- gnome-control-center : Depende: colord (>= 0.1.30) pero no es instalable
-                        Recomienda: gnome-user-share pero no es instalable
-                        Recomienda: malcontent-gui pero no es instalable
-                        Recomienda: network-manager-gnome (>= 0.9.8) pero no va a instalarse
- gnome-keyring : Depende: default-dbus-session-bus o
-                          dbus-session-bus
- libcpupower1 : Depende: libc6 (>= 2.34) pero 2.31-13+deb11u5 va a ser instalado
- libjavascriptcoregtk-4.0-18 : Depende: libc6 (>= 2.34) pero 2.31-13+deb11u5 va a ser instalado
-                               Depende: libicu72 (>= 72.1~rc-1~) pero no es instalable
-                               Depende: libstdc++6 (>= 12) pero 10.2.1-6 va a ser instalado
- liblilv-0-0 : Depende: libc6 (>= 2.34) pero 2.31-13+deb11u5 va a ser instalado
- libwebkit2gtk-4.0-37 : Depende: libavif15 (>= 0.11.1) pero no es instalable
-                        Depende: libc6 (>= 2.35) pero 2.31-13+deb11u5 va a ser instalado
-                        Depende: libgcrypt20 (>= 1.10.0) pero 1.8.7-6 va a ser instalado
-                        Depende: libglib2.0-0 (>= 2.70.0) pero 2.66.8-1 va a ser instalado
-                        Depende: libgstreamer-plugins-bad1.0-0 (>= 1.20.4) pero 1.18.4-3 va a ser instalado
-                        Depende: libgstreamer-plugins-base1.0-0 (>= 1.20.0) pero 1.18.4-2 va a ser instalado
-                        Depende: libgstreamer1.0-0 (>= 1.20.0) pero 1.18.4-2.1 va a ser instalado
-                        Depende: libicu72 (>= 72.1~rc-1~) pero no es instalable
-                        Depende: libstdc++6 (>= 12) pero 10.2.1-6 va a ser instalado
-                        Depende: libwayland-client0 (>= 1.20.0) pero 1.18.0-2~exp1.1 va a ser instalado
-                        Depende: libwebp7 pero no es instalable
-                        Recomienda: xdg-desktop-portal-gtk pero no va a instalarse
-                        Recomienda: gstreamer1.0-libav pero no es instalable
- libwebrtc-audio-processing1 : Depende: libabsl20210324 (>= 0~20210324.2-1) pero no es instalable
-                               Depende: libstdc++6 (>= 11) pero 10.2.1-6 va a ser instalado
+#barra de busqueda:
+echo -ne '[#----------------------------------] ( 01%)\r'
+    sleep 0.3
+echo -ne '[#######----------------------------] ( 20%)\r'
+    sleep 0.3
+echo -ne '[##############---------------------] ( 40%)\r'
+    sleep 0.3
+echo -ne '[#####################--------------] ( 60%)\r'
+    sleep 0.3
+echo -ne '[############################-------] ( 80%)\r'
+    sleep 0.3
+echo -ne '[###################################] (100%)\r'
+    sleep 0.3
+echo -ne '\n'
+echo " "
 
+echo "Des:1 http://deb.debian.org/debian bullseye/main amd64 base-files amd64 11.1+deb11u6 [70.1 kB]"
+sleep 0.5
+echo "Des:2 http://deb.debian.org/debian bullseye/main amd64 nftables amd64 0.9.8-3.1+deb11u1 [68.7 kB]"
+sleep 0.5
+echo "Des:3 http://deb.debian.org/debian bullseye/main amd64 libnftables1 amd64 0.9.8-3.1+deb11u1 [261 kB]"
+sleep 0.5
+echo "Des:4 http://deb.debian.org/debian bullseye/main amd64 libtasn1-6 amd64 4.16.0-2+deb11u1 [54.9 kB]"
+sleep 0.5
+echo "Des:5 http://deb.debian.org/debian bullseye/main amd64 nano amd64 5.4-2+deb11u2 [657 kB]"
+sleep 0.5
+echo "Des:6 http://deb.debian.org/debian bullseye/main amd64 distro-info-data all 0.51+deb11u3 [7 812 B]"
+sleep 0.5
+echo "Des:7 http://deb.debian.org/debian bullseye/main amd64 grub2-common amd64 2.06-3~deb11u5 [611 kB]"
+sleep 0.5
+echo "Des:8 http://deb.debian.org/debian bullseye/main amd64 grub-pc amd64 2.06-3~deb11u5 [131 kB]"
+sleep 0.5
+echo "Des:9 http://deb.debian.org/debian bullseye/main amd64 grub-pc-bin amd64 2.06-3~deb11u5 [992 kB]"
+sleep 0.5
+echo "Des:10 http://deb.debian.org/debian bullseye/main amd64 grub-common amd64 2.06-3~deb11u5 [2 761 kB]"
+sleep 0.7
+echo "Des:11 http://deb.debian.org/debian bullseye/main amd64 linux-image-5.10.0-20-amd64 amd64 5.10.158-2 [55.5 MB]"
+sleep 0.9
+echo "Des:12 http://deb.debian.org/debian bullseye/main amd64 linux-image-amd64 amd64 5.10.158-2 [1 484 B]"
+sleep 1
+echo "Descargados 61.1 MB en 6s (10.3 MB/s)"      
+echo "Preconfigurando paquetes ..."
 
-Leyendo lista de paquetes... Hecho
-Creando árbol de dependencias... Hecho
-Leyendo la información de estado... Hecho
-Calculando la actualización... Hecho
-Se instalarán los siguientes paquetes NUEVOS:
-  linux-image-5.10.0-20-amd64
-Se actualizarán los siguientes paquetes:
-  base-files distro-info-data grub-common grub-pc grub-pc-bin grub2-common libnftables1 libtasn1-6
-  linux-image-amd64 nano nftables
-11 actualizados, 1 nuevos se instalarán, 0 para eliminar y 0 no actualizados.
-Se necesita descargar 61.1 MB de archivos.
-Se utilizarán 318 MB de espacio de disco adicional después de esta operación.
-¿Desea continuar? [S/n] s
-Des:1 http://deb.debian.org/debian bullseye/main amd64 base-files amd64 11.1+deb11u6 [70.1 kB]
-Des:2 http://deb.debian.org/debian bullseye/main amd64 nftables amd64 0.9.8-3.1+deb11u1 [68.7 kB]
-Des:3 http://deb.debian.org/debian bullseye/main amd64 libnftables1 amd64 0.9.8-3.1+deb11u1 [261 kB]
-Des:4 http://deb.debian.org/debian bullseye/main amd64 libtasn1-6 amd64 4.16.0-2+deb11u1 [54.9 kB]
-Des:5 http://deb.debian.org/debian bullseye/main amd64 nano amd64 5.4-2+deb11u2 [657 kB]
-Des:6 http://deb.debian.org/debian bullseye/main amd64 distro-info-data all 0.51+deb11u3 [7 812 B]
-Des:7 http://deb.debian.org/debian bullseye/main amd64 grub2-common amd64 2.06-3~deb11u5 [611 kB]
-Des:8 http://deb.debian.org/debian bullseye/main amd64 grub-pc amd64 2.06-3~deb11u5 [131 kB]
-Des:9 http://deb.debian.org/debian bullseye/main amd64 grub-pc-bin amd64 2.06-3~deb11u5 [992 kB]
-Des:10 http://deb.debian.org/debian bullseye/main amd64 grub-common amd64 2.06-3~deb11u5 [2 761 kB]
-Des:11 http://deb.debian.org/debian bullseye/main amd64 linux-image-5.10.0-20-amd64 amd64 5.10.158-2 [55.5 MB]
-Des:12 http://deb.debian.org/debian bullseye/main amd64 linux-image-amd64 amd64 5.10.158-2 [1 484 B]
-Descargados 61.1 MB en 6s (10.3 MB/s)      
-Preconfigurando paquetes ...
-(Leyendo la base de datos ... 47147 ficheros o directorios instalados actualmente.)
-Preparando para desempaquetar .../base-files_11.1+deb11u6_amd64.deb ...
-Desempaquetando base-files (11.1+deb11u6) sobre (11.1+deb11u5) ...
-Configurando base-files (11.1+deb11u6) ...
-Instalando una nueva versión del fichero de configuración /etc/debian_version ...
-(Leyendo la base de datos ... 47147 ficheros o directorios instalados actualmente.)
-Preparando para desempaquetar .../nftables_0.9.8-3.1+deb11u1_amd64.deb ...
-Desempaquetando nftables (0.9.8-3.1+deb11u1) sobre (0.9.8-3.1) ...
-Preparando para desempaquetar .../libnftables1_0.9.8-3.1+deb11u1_amd64.deb ...
-Desempaquetando libnftables1:amd64 (0.9.8-3.1+deb11u1) sobre (0.9.8-3.1) ...
-Preparando para desempaquetar .../libtasn1-6_4.16.0-2+deb11u1_amd64.deb ...
-Desempaquetando libtasn1-6:amd64 (4.16.0-2+deb11u1) sobre (4.16.0-2) ...
-Configurando libtasn1-6:amd64 (4.16.0-2+deb11u1) ...
-(Leyendo la base de datos ... 47147 ficheros o directorios instalados actualmente.)
-Preparando para desempaquetar .../0-nano_5.4-2+deb11u2_amd64.deb ...
-Desempaquetando nano (5.4-2+deb11u2) sobre (5.4-2+deb11u1) ...
-Preparando para desempaquetar .../1-distro-info-data_0.51+deb11u3_all.deb ...
-Desempaquetando distro-info-data (0.51+deb11u3) sobre (0.51+deb11u2) ...
-Preparando para desempaquetar .../2-grub2-common_2.06-3~deb11u5_amd64.deb ...
-Desempaquetando grub2-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ...
-Preparando para desempaquetar .../3-grub-pc_2.06-3~deb11u5_amd64.deb ...
-Desempaquetando grub-pc (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ...
-Preparando para desempaquetar .../4-grub-pc-bin_2.06-3~deb11u5_amd64.deb ...
-Desempaquetando grub-pc-bin (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ...
-Preparando para desempaquetar .../5-grub-common_2.06-3~deb11u5_amd64.deb ...
-Desempaquetando grub-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ...
-Seleccionando el paquete linux-image-5.10.0-20-amd64 previamente no seleccionado.
-Preparando para desempaquetar .../6-linux-image-5.10.0-20-amd64_5.10.158-2_amd64.deb ...
-Desempaquetando linux-image-5.10.0-20-amd64 (5.10.158-2) ...
-Preparando para desempaquetar .../7-linux-image-amd64_5.10.158-2_amd64.deb ...
-Desempaquetando linux-image-amd64 (5.10.158-2) sobre (5.10.149-2) ...
-Configurando libnftables1:amd64 (0.9.8-3.1+deb11u1) ...
-Configurando nftables (0.9.8-3.1+deb11u1) ...
-Configurando distro-info-data (0.51+deb11u3) ...
-Configurando grub-common (2.06-3~deb11u5) ...
-Configurando nano (5.4-2+deb11u2) ...
-Configurando linux-image-5.10.0-20-amd64 (5.10.158-2) ...
-I: /vmlinuz.old is now a symlink to boot/vmlinuz-5.10.0-19-amd64
-I: /initrd.img.old is now a symlink to boot/initrd.img-5.10.0-19-amd64
-I: /vmlinuz is now a symlink to boot/vmlinuz-5.10.0-20-amd64
-I: /initrd.img is now a symlink to boot/initrd.img-5.10.0-20-amd64
-/etc/kernel/postinst.d/initramfs-tools:
-update-initramfs: Generating /boot/initrd.img-5.10.0-20-amd64
-/etc/kernel/postinst.d/zz-update-grub:
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-5.10.0-20-amd64
-Found initrd image: /boot/initrd.img-5.10.0-20-amd64
-Found linux image: /boot/vmlinuz-5.10.0-19-amd64
-Found initrd image: /boot/initrd.img-5.10.0-19-amd64
-Found linux image: /boot/vmlinuz-5.10.0-18-amd64
-Found initrd image: /boot/initrd.img-5.10.0-18-amd64
-Warning: os-prober will be executed to detect other bootable partitions.
-Its output will be used to detect bootable binaries on them and create new boot entries.
-done
-Configurando grub2-common (2.06-3~deb11u5) ...
-Configurando linux-image-amd64 (5.10.158-2) ...
-Configurando grub-pc-bin (2.06-3~deb11u5) ...
-Configurando grub-pc (2.06-3~deb11u5) ...
-Instalando para plataforma i386-pc.
-Instalación terminada. No se notificó ningún error.
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-5.10.0-20-amd64
-Found initrd image: /boot/initrd.img-5.10.0-20-amd64
-Found linux image: /boot/vmlinuz-5.10.0-19-amd64
-Found initrd image: /boot/initrd.img-5.10.0-19-amd64
-Found linux image: /boot/vmlinuz-5.10.0-18-amd64
-Found initrd image: /boot/initrd.img-5.10.0-18-amd64
-Warning: os-prober will be executed to detect other bootable partitions.
-Its output will be used to detect bootable binaries on them and create new boot entries.
-done
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: OK \r'
+    sleep 0.3
+echo -ne '\n'
+echo ""
 
+echo "(Leyendo la base de datos ... 47147 ficheros o directorios instalados actualmente.)"
+echo "Preparando para desempaquetar .../base-files_11.1+deb11u6_amd64.deb ..."
+sleep 0.5
+echo "Desempaquetando base-files (11.1+deb11u6) sobre (11.1+deb11u5) ..."
+echo "Configurando base-files (11.1+deb11u6) ..."
+sleep 0.5
+echo "Instalando una nueva versión del fichero de configuración /etc/debian_version ..."
+echo "(Leyendo la base de datos ... 47147 ficheros o directorios instalados actualmente.)"
+echo "Preparando para desempaquetar .../nftables_0.9.8-3.1+deb11u1_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando nftables (0.9.8-3.1+deb11u1) sobre (0.9.8-3.1) ..."
+echo "Preparando para desempaquetar .../libnftables1_0.9.8-3.1+deb11u1_amd64.deb ..."
+sleep 0.5
+echo "Desempaquetando libnftables1:amd64 (0.9.8-3.1+deb11u1) sobre (0.9.8-3.1) ..."
+echo "Preparando para desempaquetar .../libtasn1-6_4.16.0-2+deb11u1_amd64.deb ..."
+sleep 0.5
+echo "Desempaquetando libtasn1-6:amd64 (4.16.0-2+deb11u1) sobre (4.16.0-2) ..."
+sleep 0.6
 
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: OK \r'
+    sleep 0.3
+echo -ne '\n'
+echo ""
 
-Leyendo lista de paquetes... Hecho
-Creando árbol de dependencias... Hecho
-Leyendo la información de estado... Hecho
-Calculando la actualización... Hecho
-Se instalarán los siguientes paquetes NUEVOS:
-  linux-image-5.10.0-20-amd64
-Se actualizarán los siguientes paquetes:
-  base-files grub-common grub-pc grub-pc-bin grub2-common libnftables1 libtasn1-6 linux-image-amd64 nano
-  nftables
-10 actualizados, 1 nuevos se instalarán, 0 para eliminar y 0 no actualizados.
-Se necesita descargar 61.1 MB de archivos.
-Se utilizarán 318 MB de espacio de disco adicional después de esta operación.
-¿Desea continuar? [S/n] s
-Des:1 http://deb.debian.org/debian bullseye/main amd64 base-files amd64 11.1+deb11u6 [70.1 kB]
-Des:2 http://deb.debian.org/debian bullseye/main amd64 nftables amd64 0.9.8-3.1+deb11u1 [68.7 kB]
-Des:3 http://deb.debian.org/debian bullseye/main amd64 libnftables1 amd64 0.9.8-3.1+deb11u1 [261 kB]
-Des:4 http://deb.debian.org/debian bullseye/main amd64 libtasn1-6 amd64 4.16.0-2+deb11u1 [54.9 kB]
-Des:5 http://deb.debian.org/debian bullseye/main amd64 nano amd64 5.4-2+deb11u2 [657 kB]
-Des:6 http://deb.debian.org/debian bullseye/main amd64 grub2-common amd64 2.06-3~deb11u5 [611 kB]
-Des:7 http://deb.debian.org/debian bullseye/main amd64 grub-pc amd64 2.06-3~deb11u5 [131 kB]
-Des:8 http://deb.debian.org/debian bullseye/main amd64 grub-pc-bin amd64 2.06-3~deb11u5 [992 kB]
-Des:9 http://deb.debian.org/debian bullseye/main amd64 grub-common amd64 2.06-3~deb11u5 [2 761 kB]
-Des:10 http://deb.debian.org/debian bullseye/main amd64 linux-image-5.10.0-20-amd64 amd64 5.10.158-2 [55.5 MB]
-Des:11 http://deb.debian.org/debian bullseye/main amd64 linux-image-amd64 amd64 5.10.158-2 [1 484 B]
-Descargados 61.1 MB en 6s (10.3 MB/s)      
-Preconfigurando paquetes ...
-(Leyendo la base de datos ... 32819 ficheros o directorios instalados actualmente.)
-Preparando para desempaquetar .../base-files_11.1+deb11u6_amd64.deb ...
-Desempaquetando base-files (11.1+deb11u6) sobre (11.1+deb11u5) ...
-Configurando base-files (11.1+deb11u6) ...
-Instalando una nueva versión del fichero de configuración /etc/debian_version ...
-(Leyendo la base de datos ... 32819 ficheros o directorios instalados actualmente.)
-Preparando para desempaquetar .../nftables_0.9.8-3.1+deb11u1_amd64.deb ...
-Desempaquetando nftables (0.9.8-3.1+deb11u1) sobre (0.9.8-3.1) ...
-Preparando para desempaquetar .../libnftables1_0.9.8-3.1+deb11u1_amd64.deb ...
-Desempaquetando libnftables1:amd64 (0.9.8-3.1+deb11u1) sobre (0.9.8-3.1) ...
-Preparando para desempaquetar .../libtasn1-6_4.16.0-2+deb11u1_amd64.deb ...
-Desempaquetando libtasn1-6:amd64 (4.16.0-2+deb11u1) sobre (4.16.0-2) ...
-Configurando libtasn1-6:amd64 (4.16.0-2+deb11u1) ...
-(Leyendo la base de datos ... 32819 ficheros o directorios instalados actualmente.)
-Preparando para desempaquetar .../0-nano_5.4-2+deb11u2_amd64.deb ...
-Desempaquetando nano (5.4-2+deb11u2) sobre (5.4-2+deb11u1) ...
-Preparando para desempaquetar .../1-grub2-common_2.06-3~deb11u5_amd64.deb ...
-Desempaquetando grub2-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ...
-Preparando para desempaquetar .../2-grub-pc_2.06-3~deb11u5_amd64.deb ...
-Desempaquetando grub-pc (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ...
-Preparando para desempaquetar .../3-grub-pc-bin_2.06-3~deb11u5_amd64.deb ...
-Desempaquetando grub-pc-bin (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ...
-Preparando para desempaquetar .../4-grub-common_2.06-3~deb11u5_amd64.deb ...
-Desempaquetando grub-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ...
-Seleccionando el paquete linux-image-5.10.0-20-amd64 previamente no seleccionado.
-Preparando para desempaquetar .../5-linux-image-5.10.0-20-amd64_5.10.158-2_amd64.deb ...
+echo "Configurando libtasn1-6:amd64 (4.16.0-2+deb11u1) ..."
+sleep 0.3
+echo "(Leyendo la base de datos ... 47147 ficheros o directorios instalados actualmente.)"
+echo ""
+echo "Preparando para desempaquetar .../0-nano_5.4-2+deb11u2_amd64.deb ..."
+sleep 0.5
+echo "Desempaquetando nano (5.4-2+deb11u2) sobre (5.4-2+deb11u1) ..."
+echo "Preparando para desempaquetar .../1-distro-info-data_0.51+deb11u3_all.deb ..."
+sleep 0.6
+echo "Desempaquetando distro-info-data (0.51+deb11u3) sobre (0.51+deb11u2) ..."
+echo "Preparando para desempaquetar .../2-grub2-common_2.06-3~deb11u5_amd64.deb ..."
+sleep 1.2
+echo "Desempaquetando grub2-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
+echo "Preparando para desempaquetar .../3-grub-pc_2.06-3~deb11u5_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando grub-pc (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
+echo "Preparando para desempaquetar .../4-grub-pc-bin_2.06-3~deb11u5_amd64.deb ..."
+sleep 0.6
+echo "Desempaquetando grub-pc-bin (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
+echo "Preparando para desempaquetar .../5-grub-common_2.06-3~deb11u5_amd64.deb ..."
+sleep 0.8
+echo "Desempaquetando grub-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
+echo "Seleccionando el paquete linux-image-5.10.0-20-amd64 previamente no seleccionado."
+echo "Preparando para desempaquetar .../6-linux-image-5.10.0-20-amd64_5.10.158-2_amd64.deb ..."
+sleep 0.9
+echo "Desempaquetando linux-image-5.10.0-20-amd64 (5.10.158-2) ..."
+echo "Preparando para desempaquetar .../7-linux-image-amd64_5.10.158-2_amd64.deb ..."
+sleep 0.5
+echo "Desempaquetando linux-image-amd64 (5.10.158-2) sobre (5.10.149-2) ..."
+echo ""
+echo "Configurando libnftables1:amd64 (0.9.8-3.1+deb11u1) ..."
+echo "Configurando nftables (0.9.8-3.1+deb11u1) ..."
+echo "Configurando distro-info-data (0.51+deb11u3) ..."
+echo "Configurando grub-common (2.06-3~deb11u5) ..."
+echo "Configurando nano (5.4-2+deb11u2) ..."
+echo "Configurando linux-image-5.10.0-20-amd64 (5.10.158-2) ..."
+echo ""
+
+#barra de busqueda:
+echo -ne '[#----------------------------------] ( 01%)\r'
+    sleep 0.3
+echo -ne '[#######----------------------------] ( 20%)\r'
+    sleep 0.3
+echo -ne '[##############---------------------] ( 40%)\r'
+    sleep 0.3
+echo -ne '[#####################--------------] ( 60%)\r'
+    sleep 0.3
+echo -ne '[############################-------] ( 80%)\r'
+    sleep 0.3
+echo -ne '[###################################] (100%)\r'
+    sleep 0.3
+echo -ne '\n'
+echo " "
+
+echo "      I: /vmlinuz.old is now a symlink to boot/vmlinuz-5.10.0-19-amd64"
+echo "      I: /initrd.img.old is now a symlink to boot/initrd.img-5.10.0-19-amd64"
+echo "      I: /vmlinuz is now a symlink to boot/vmlinuz-5.10.0-20-amd64"
+echo "      I: /initrd.img is now a symlink to boot/initrd.img-5.10.0-20-amd64"
+echo ""
+echo "/etc/kernel/postinst.d/initramfs-tools:"
+echo "update-initramfs: Generating /boot/initrd.img-5.10.0-20-amd64"
+echo "/etc/kernel/postinst.d/zz-update-grub:"
+echo "Generating grub configuration file ..."
+sleep 2
+echo ""
+        echo "Found linux image: /boot/vmlinuz-5.10.0-20-amd64"
+        echo "Found initrd image: /boot/initrd.img-5.10.0-20-amd64"
+        echo "Found linux image: /boot/vmlinuz-5.10.0-19-amd64"
+        echo "Found initrd image: /boot/initrd.img-5.10.0-19-amd64"
+        echo "Found linux image: /boot/vmlinuz-5.10.0-18-amd64"
+        echo "Found initrd image: /boot/initrd.img-5.10.0-18-amd64"
+
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: OK \r'
+    sleep 0.8
+echo -ne '\n'
+echo ""
+
+echo -e "\e[0;1;91mWarning: os-prober will be executed to detect other bootable partitions.\e[0m"
+echo "Its output will be used to detect bootable binaries on them and create new boot entries."
+sleep 2
+echo ""
+echo "done"
+sleep 0.3
+echo ""
+
+echo "Configurando grub2-common (2.06-3~deb11u5) ..."
+echo "Configurando linux-image-amd64 (5.10.158-2) ..."
+echo "Configurando grub-pc-bin (2.06-3~deb11u5) ..."
+echo "Configurando grub-pc (2.06-3~deb11u5) ..."
+sleep 0.5
+echo "Instalando para plataforma i386-pc."
+sleep 0.8
+echo "Instalación terminada. No se notificó ningún error."
+sleep 0.7
+echo "Generating grub configuration file ..."
+
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: OK \r'
+    sleep 0.3
+echo -ne '\n'
+echo ""
+
+echo "Found linux image: /boot/vmlinuz-5.10.0-20-amd64"
+echo "Found initrd image: /boot/initrd.img-5.10.0-20-amd64"
+echo "Found linux image: /boot/vmlinuz-5.10.0-19-amd64"
+echo "Found initrd image: /boot/initrd.img-5.10.0-19-amd64"
+echo "Found linux image: /boot/vmlinuz-5.10.0-18-amd64"
+echo "Found initrd image: /boot/initrd.img-5.10.0-18-amd64"
+sleep 1
+echo ""
+
+echo -e "\e[0;1;91mWarning: os-prober will be executed to detect other bootable partitions.\e[0m"
+echo "Its output will be used to detect bootable binaries on them and create new boot entries."
+sleep 0.5
+
+echo ""
+echo -ne '[/💀--------------------------------------------] ( 03%)\r'
+sleep 0.4
+echo -ne '[///💀------------------------------------------] ( 08%)\r'
+sleep 0.4
+echo -ne '[///////💀--------------------------------------] ( 16%)\r'
+sleep 0.4
+echo -ne '[///////////💀----------------------------------] ( 24%)\r'
+sleep 0.4
+echo -ne '[///////////////💀------------------------------] ( 33%)\r'
+sleep 0.4
+echo -ne '[///////////////////💀--------------------------] ( 41%)\r'
+sleep 0.4
+echo -ne '[///////////////////////💀----------------------] ( 49%)\r'
+sleep 0.4
+echo -ne '[///////////////////////////💀------------------] ( 58%)\r'
+sleep 0.4
+echo -ne '[///////////////////////////////💀--------------] ( 66%)\r'
+sleep 0.4
+echo -ne '[///////////////////////////////////💀----------] ( 74%)\r'
+sleep 0.6
+echo -ne '[///////////////////////////////////////💀------] ( 83%)\r'
+sleep 0.6
+echo -ne '[///////////////////////////////////////////💀--] ( 92%)\r'
+sleep 0.7
+echo -ne '[/////////////////////////////////////////////💀] (100%)\r'
+sleep 0.7
+echo -ne '\n'
+echo ""
+echo "---done"
+echo ""
+echo ""
+echo "Se instalarán los siguientes paquetes NUEVOS:"
+echo "  linux-image-5.10.0-20-amd64"
+sleep 0.3
+echo "Se actualizarán los siguientes paquetes:"
+echo "  base-files grub-common grub-pc grub-pc-bin grub2-common libnftables1 libtasn1-6 linux-image-amd64 nano"
+echo "  nftables"
+sleep 0.3
+echo "10 actualizados, 1 nuevos se instalarán, 0 para eliminar y 0 no actualizados."
+sleep 0.3
+echo "Se necesita descargar 61.1 MB de archivos."
+sleep 0.3
+echo "Se utilizarán 318 MB de espacio de disco adicional después de esta operación."
+sleep 0.3
+echo "(Leyendo la base de datos ... 32819 ficheros o directorios instalados actualmente.)"
+
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: OK \r'
+    sleep 0.3
+echo -ne '\n'
+
+echo "Preparando para desempaquetar .../base-files_11.1+deb11u6_amd64.deb ..."
+echo "Desempaquetando base-files (11.1+deb11u6) sobre (11.1+deb11u5) ..."
+sleep 0.3
+echo "Configurando base-files (11.1+deb11u6) ..."
+sleep 0.3
+echo "Instalando una nueva versión del fichero de configuración /etc/debian_version ..."
+echo "(Leyendo la base de datos ... 32819 ficheros o directorios instalados actualmente.)"
+echo "Preparando para desempaquetar .../nftables_0.9.8-3.1+deb11u1_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando nftables (0.9.8-3.1+deb11u1) sobre (0.9.8-3.1) ..."
+echo "Preparando para desempaquetar .../libnftables1_0.9.8-3.1+deb11u1_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando libnftables1:amd64 (0.9.8-3.1+deb11u1) sobre (0.9.8-3.1) ..."
+echo "Preparando para desempaquetar .../libtasn1-6_4.16.0-2+deb11u1_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando libtasn1-6:amd64 (4.16.0-2+deb11u1) sobre (4.16.0-2) ..."
+echo "Configurando libtasn1-6:amd64 (4.16.0-2+deb11u1) ..."
+sleep 0.6
+echo "(Leyendo la base de datos ... 32819 ficheros o directorios instalados actualmente.)"
+echo "Preparando para desempaquetar .../0-nano_5.4-2+deb11u2_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando nano (5.4-2+deb11u2) sobre (5.4-2+deb11u1) ..."
+echo "Preparando para desempaquetar .../1-grub2-common_2.06-3~deb11u5_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando grub2-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
+echo "Preparando para desempaquetar .../2-grub-pc_2.06-3~deb11u5_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando grub-pc (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
+echo "Preparando para desempaquetar .../3-grub-pc-bin_2.06-3~deb11u5_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando grub-pc-bin (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
+echo "Preparando para desempaquetar .../4-grub-common_2.06-3~deb11u5_amd64.deb ..."
+sleep 0.3
+echo "Desempaquetando grub-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
+echo "Seleccionando el paquete linux-image-5.10.0-20-amd64 previamente no seleccionado."
+echo "Preparando para desempaquetar .../5-linux-image-5.10.0-20-amd64_5.10.158-2_amd64.deb ..."
+sleep 0.5
 Desempaquetando linux-image-5.10.0-20-amd64 (5.10.158-2) ...
 Preparando para desempaquetar .../6-linux-image-amd64_5.10.158-2_amd64.deb ...
 Desempaquetando linux-image-amd64 (5.10.158-2) sobre (5.10.149-2) ...
@@ -295,3 +538,4 @@ Its output will be used to detect bootable binaries on them and create new boot 
 done
 Procesando disparadores para libc-bin (2.31-13+deb11u5) ...
 
+echo "ICAgICAgICAgICAgICAgICAgICAgIEkuICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgWEltICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgIC4uLi5YSUltIC4gICAgICAgICAgICAKICAgICAgICAgICAgIC4uO0knJyAgIElYSU1JICdJOzsgICAgICAgIAouLiAgICAgICAgLi5JJyAgICAgICAgIFhNTU1MICAgIEk7LiAgICAgCiAgJyc7Li4gIDtQICAgICAgICAgICAgWElNRU5BICAgICAnSS4gICAKICAgICAnJ1hYaSsuICAgICAgICAgICA6SU1FTkE6ICAgICAgJzogIAogICAgICAuOicnSU1FTkFpOi4gICAgIDpYSU1FTjogICAgICAgJzogCiAgICAgIFggICAgJyc6WElNRU5BOiAgOklNRU5BICAgICAgICAgSTsKICAgICAgSSAgICAgICAgJyc7QkFDSFNDUklQWElMLiAgICAgICAgSQogICAgICBNICAgICAgICAgICAnJztYSU1FTkFCQVNIWEwgICAgICBJCiAgICAgIEUgICAgICAgICAgICAgIDtYWFhCQVNIUConJyogICAgIEkKICAgICAgIE4gICAgICAgICAgLjRYSU1FTkFQJyAgICAgICAgICBJIAogICAgICAgIEEgICAgICAgLjtYSU1QJycgICAgICAgICAgICAuSSAgCiAgICAgICAgICdCLiAuOycnIDsnICAgICAgICAgICAgICAuO0kgICAKICAgICAgICAgIC47QSAgICBJICAgICAgICAgICAgLi47SScgICAgIAogICAgICAgLionICAgJyc7SS4uICAgICAgIC4uOztJJyAgICAgICAgCiAgICAgJycgICAgICAgJyAgICAnJycnJycnJyAgICAgICAgIAo"

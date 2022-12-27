@@ -210,7 +210,7 @@ echo -e "\e[0;38;5;159m          .;A    I            ..;I'                      
 echo -e "\e[0;38;5;159m       .*'   '';I..       ..;;I'    \e[0m"
 echo -e "\e[0;38;5;159m     ''       '    ''''''''         \e[0m"
 echo " "
-echo -e "\e[0;38;5;208m██ :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
+echo -e "\e[0;38;5;208m🦄 :::::Se acompleto la tarea de instalacion:::::]]]]\e[0m"
 echo -e "\e[0;38;5;208m[Reinicia el sistema antes de usar los paquetes instalados de Flatpak.]\e[0m"
     date
 echo " "
