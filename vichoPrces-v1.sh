@@ -336,11 +336,8 @@ echo -ne 'Cargando: / \r'
 echo -ne 'Cargando: OK \r'
     sleep 0.8
 echo -ne '\n'
-echo ""
 
-echo -e "\e[0;1;91mWarning: os-prober will be executed to detect other bootable partitions.\e[0m"
-echo "Its output will be used to detect bootable binaries on them and create new boot entries."
-sleep 2
+
 echo ""
 echo "done"
 sleep 0.3
@@ -378,48 +375,6 @@ echo -ne 'Cargando: OK \r'
 echo -ne '\n'
 echo ""
 
-echo "Found linux image: /boot/vmlinuz-5.10.0-20-amd64"
-echo "Found initrd image: /boot/initrd.img-5.10.0-20-amd64"
-echo "Found linux image: /boot/vmlinuz-5.10.0-19-amd64"
-echo "Found initrd image: /boot/initrd.img-5.10.0-19-amd64"
-echo "Found linux image: /boot/vmlinuz-5.10.0-18-amd64"
-echo "Found initrd image: /boot/initrd.img-5.10.0-18-amd64"
-sleep 1
-echo ""
-
-echo -e "\e[0;1;91mWarning: os-prober will be executed to detect other bootable partitions.\e[0m"
-echo "Its output will be used to detect bootable binaries on them and create new boot entries."
-sleep 0.5
-
-echo ""
-echo -ne '[/💀--------------------------------------------] ( 03%)\r'
-sleep 0.4
-echo -ne '[///💀------------------------------------------] ( 08%)\r'
-sleep 0.4
-echo -ne '[///////💀--------------------------------------] ( 16%)\r'
-sleep 0.4
-echo -ne '[///////////💀----------------------------------] ( 24%)\r'
-sleep 0.4
-echo -ne '[///////////////💀------------------------------] ( 33%)\r'
-sleep 0.4
-echo -ne '[///////////////////💀--------------------------] ( 41%)\r'
-sleep 0.4
-echo -ne '[///////////////////////💀----------------------] ( 49%)\r'
-sleep 0.4
-echo -ne '[///////////////////////////💀------------------] ( 58%)\r'
-sleep 0.4
-echo -ne '[///////////////////////////////💀--------------] ( 66%)\r'
-sleep 0.4
-echo -ne '[///////////////////////////////////💀----------] ( 74%)\r'
-sleep 0.6
-echo -ne '[///////////////////////////////////////💀------] ( 83%)\r'
-sleep 0.6
-echo -ne '[///////////////////////////////////////////💀--] ( 92%)\r'
-sleep 0.7
-echo -ne '[/////////////////////////////////////////////💀] (100%)\r'
-sleep 0.7
-echo -ne '\n'
-echo ""
 echo "---done"
 echo ""
 echo ""
@@ -457,6 +412,7 @@ echo -ne 'Cargando: / \r'
 echo -ne 'Cargando: OK \r'
     sleep 0.3
 echo -ne '\n'
+echo ""
 
 echo "Preparando para desempaquetar .../base-files_11.1+deb11u6_amd64.deb ..."
 echo "Desempaquetando base-files (11.1+deb11u6) sobre (11.1+deb11u5) ..."
@@ -495,47 +451,133 @@ echo "Desempaquetando grub-common (2.06-3~deb11u5) sobre (2.06-3~deb11u4) ..."
 echo "Seleccionando el paquete linux-image-5.10.0-20-amd64 previamente no seleccionado."
 echo "Preparando para desempaquetar .../5-linux-image-5.10.0-20-amd64_5.10.158-2_amd64.deb ..."
 sleep 0.5
-Desempaquetando linux-image-5.10.0-20-amd64 (5.10.158-2) ...
-Preparando para desempaquetar .../6-linux-image-amd64_5.10.158-2_amd64.deb ...
-Desempaquetando linux-image-amd64 (5.10.158-2) sobre (5.10.149-2) ...
-Configurando libnftables1:amd64 (0.9.8-3.1+deb11u1) ...
-Configurando nftables (0.9.8-3.1+deb11u1) ...
-Configurando grub-common (2.06-3~deb11u5) ...
-Configurando nano (5.4-2+deb11u2) ...
-Configurando linux-image-5.10.0-20-amd64 (5.10.158-2) ...
-I: /vmlinuz.old is now a symlink to boot/vmlinuz-5.10.0-19-amd64
-I: /initrd.img.old is now a symlink to boot/initrd.img-5.10.0-19-amd64
-I: /vmlinuz is now a symlink to boot/vmlinuz-5.10.0-20-amd64
-I: /initrd.img is now a symlink to boot/initrd.img-5.10.0-20-amd64
-/etc/kernel/postinst.d/initramfs-tools:
-update-initramfs: Generating /boot/initrd.img-5.10.0-20-amd64
-/etc/kernel/postinst.d/zz-update-grub:
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-5.10.0-20-amd64
-Found initrd image: /boot/initrd.img-5.10.0-20-amd64
-Found linux image: /boot/vmlinuz-5.10.0-19-amd64
-Found initrd image: /boot/initrd.img-5.10.0-19-amd64
-Found linux image: /boot/vmlinuz-5.10.0-18-amd64
-Found initrd image: /boot/initrd.img-5.10.0-18-amd64
-Warning: os-prober will be executed to detect other bootable partitions.
-Its output will be used to detect bootable binaries on them and create new boot entries.
-done
-Configurando grub2-common (2.06-3~deb11u5) ...
-Configurando linux-image-amd64 (5.10.158-2) ...
-Configurando grub-pc-bin (2.06-3~deb11u5) ...
-Configurando grub-pc (2.06-3~deb11u5) ...
-Instalando para plataforma i386-pc.
-Instalación terminada. No se notificó ningún error.
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-5.10.0-20-amd64
-Found initrd image: /boot/initrd.img-5.10.0-20-amd64
-Found linux image: /boot/vmlinuz-5.10.0-19-amd64
-Found initrd image: /boot/initrd.img-5.10.0-19-amd64
-Found linux image: /boot/vmlinuz-5.10.0-18-amd64
-Found initrd image: /boot/initrd.img-5.10.0-18-amd64
-Warning: os-prober will be executed to detect other bootable partitions.
-Its output will be used to detect bootable binaries on them and create new boot entries.
-done
-Procesando disparadores para libc-bin (2.31-13+deb11u5) ...
+echo "Desempaquetando linux-image-5.10.0-20-amd64 (5.10.158-2) ..."
+echo "Preparando para desempaquetar .../6-linux-image-amd64_5.10.158-2_amd64.deb ..."
+sleep 0.5
+echo "Desempaquetando linux-image-amd64 (5.10.158-2) sobre (5.10.149-2) ..."
+sleep 0.5
+echo ""
+echo "Configurando libnftables1:amd64 (0.9.8-3.1+deb11u1) ..."
+sleep 0.2
+echo "Configurando nftables (0.9.8-3.1+deb11u1) ..."
+sleep 0.4
+echo "Configurando grub-common (2.06-3~deb11u5) ..."
+sleep 0.6
+echo "Configurando nano (5.4-2+deb11u2) ..."
+sleep 0.2
+echo "Configurando linux-image-5.10.0-20-amd64 (5.10.158-2) ..."
+sleep 0.4
+echo "done"
+echo ""
+sleep 1
+echo "Configurando grub2-common (2.06-3~deb11u5) ..."
+sleep 0.2
+echo "Configurando linux-image-amd64 (5.10.158-2) ..."
+sleep 0.2
+echo "Configurando grub-pc-bin (2.06-3~deb11u5) ..."
+sleep 0.2
+echo "Configurando grub-pc (2.06-3~deb11u5) ..."
+sleep 0.2
+echo "Instalando para plataforma i386-pc."
 
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: OK \r'
+    sleep 0.3
+echo -ne '\n'
+echo ""
+
+echo "Instalación terminada. No se notificó ningún error."
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: - \r'
+    sleep 0.3
+echo -ne 'Cargando: \ \r'
+    sleep 0.3
+echo -ne 'Cargando: | \r'
+    sleep 0.3
+echo -ne 'Cargando: / \r'
+    sleep 0.3
+echo -ne 'Cargando: OK \r'
+    sleep 0.3
+echo -ne '\n'
+echo ""
+echo "Generating grub configuration file ..."
+sleep 0.9
+echo "Found linux image: /boot/vmlinuz-5.10.0-20-amd64"
+sleep 0.3
+echo "Found initrd image: /boot/initrd.img-5.10.0-20-amd64"
+sleep 0.3
+echo "Found linux image: /boot/vmlinuz-5.10.0-19-amd64"
+sleep 0.3
+echo "Found initrd image: /boot/initrd.img-5.10.0-19-amd64"
+sleep 0.3
+echo "Found linux image: /boot/vmlinuz-5.10.0-18-amd64"
+sleep 0.3
+echo "Found initrd image: /boot/initrd.img-5.10.0-18-amd64"
+sleep 2
+echo ""
+
+echo -e "\e[0;1;91mWarning: os-prober will be executed to detect other bootable partitions.\e[0m"
+echo "Its output will be used to detect bootable binaries on them and create new boot entries."
+
+sleep 0.5
+
+echo ""
+echo -ne '[/💀--------------------------------------------] ( 03%)\r'
+sleep 0.4
+echo -ne '[///💀------------------------------------------] ( 08%)\r'
+sleep 0.4
+echo -ne '[///////💀--------------------------------------] ( 16%)\r'
+sleep 0.4
+echo -ne '[///////////💀----------------------------------] ( 24%)\r'
+sleep 0.4
+echo -ne '[///////////////💀------------------------------] ( 33%)\r'
+sleep 0.4
+echo -ne '[///////////////////💀--------------------------] ( 41%)\r'
+sleep 0.4
+echo -ne '[///////////////////////💀----------------------] ( 49%)\r'
+sleep 0.4
+echo -ne '[///////////////////////////💀------------------] ( 58%)\r'
+sleep 0.4
+echo -ne '[///////////////////////////////💀--------------] ( 66%)\r'
+sleep 0.4
+echo -ne '[///////////////////////////////////💀----------] ( 74%)\r'
+sleep 0.6
+echo -ne '[///////////////////////////////////////💀------] ( 83%)\r'
+sleep 0.6
+echo -ne '[///////////////////////////////////////////💀--] ( 92%)\r'
+sleep 0.7
+echo -ne '[/////////////////////////////////////////////💀] (100%)\r'
+sleep 0.7
+echo -ne '\n'
+echo ""
+echo "---done"
+echo ""
+echo "Procesando disparadores para libc-bin (2.31-13+deb11u5) ..."
+sleep 0.7
+echo ""
 echo "ICAgICAgICAgICAgICAgICAgICAgIEkuICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgWEltICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgIC4uLi5YSUltIC4gICAgICAgICAgICAKICAgICAgICAgICAgIC4uO0knJyAgIElYSU1JICdJOzsgICAgICAgIAouLiAgICAgICAgLi5JJyAgICAgICAgIFhNTU1MICAgIEk7LiAgICAgCiAgJyc7Li4gIDtQICAgICAgICAgICAgWElNRU5BICAgICAnSS4gICAKICAgICAnJ1hYaSsuICAgICAgICAgICA6SU1FTkE6ICAgICAgJzogIAogICAgICAuOicnSU1FTkFpOi4gICAgIDpYSU1FTjogICAgICAgJzogCiAgICAgIFggICAgJyc6WElNRU5BOiAgOklNRU5BICAgICAgICAgSTsKICAgICAgSSAgICAgICAgJyc7QkFDSFNDUklQWElMLiAgICAgICAgSQogICAgICBNICAgICAgICAgICAnJztYSU1FTkFCQVNIWEwgICAgICBJCiAgICAgIEUgICAgICAgICAgICAgIDtYWFhCQVNIUConJyogICAgIEkKICAgICAgIE4gICAgICAgICAgLjRYSU1FTkFQJyAgICAgICAgICBJIAogICAgICAgIEEgICAgICAgLjtYSU1QJycgICAgICAgICAgICAuSSAgCiAgICAgICAgICdCLiAuOycnIDsnICAgICAgICAgICAgICAuO0kgICAKICAgICAgICAgIC47QSAgICBJICAgICAgICAgICAgLi47SScgICAgIAogICAgICAgLionICAgJyc7SS4uICAgICAgIC4uOztJJyAgICAgICAgCiAgICAgJycgICAgICAgJyAgICAnJycnJycnJyAgICAgICAgIAo"
+echo ""
+echo ""
+neofetch
