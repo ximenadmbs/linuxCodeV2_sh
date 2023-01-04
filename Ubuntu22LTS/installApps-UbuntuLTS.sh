@@ -140,18 +140,18 @@ echo " "
 
 #Seccion de instalaciones de Plantillas y complementos personalisados.
     echo " Instalando las plantillas en ~/Plantillas"
-    touch ~/Plantillas/'Documento txt.txt'
-        echo ". " >> ~/Plantillas/'Documento txt.txt'
+    touch $HOME/Plantillas/'Documento txt.txt'
+        echo ". " >> $HOME/Plantillas/'Documento txt.txt'
 
-    touch ~/Plantillas/'Documento md.md'
-        echo "# Titulo" >> ~/Plantillas/'Documento md.md'
-        echo "### Sub titulo" >> ~/Plantillas/'Documento md.md'
-        echo "> Comentario" >> ~/Plantillas/'Documento md.md'
-        echo "* Vineta" >> ~/Plantillas/'Documento md.md'
+    touch $HOME/Plantillas/'Documento md.md'
+        echo "# Titulo" >> $HOME/Plantillas/'Documento md.md'
+        echo "### Sub titulo" >> $HOME/Plantillas/'Documento md.md'
+        echo "> Comentario" >> $HOME/Plantillas/'Documento md.md'
+        echo "* Vineta" >> $HOME/Plantillas/'Documento md.md'
 
-    tar -Jxvf plantillas.tar.xz -C ~/Plantillas
+    tar -Jxvf plantillas.tar.xz -C $HOME/Plantillas
 
-    	cp -r fish/ ~/.config/
+    	cp -r fish/ $HOME/.config/
     echo " Instalando de bienvenida para fish en ~/.config/fish/"
 echo " "
         echo -ne '[#---------------------------------] ( 03%)\r'
@@ -225,3 +225,4 @@ echo " "
 # mié 30 nov 2022 12:57:06 CST
 # dom 04 dic 2022 13:20:49 CST
 # sáb 17 dic 2022 19:14:01 CST
+# mar 03 ene 2023 19:53:42 CST
