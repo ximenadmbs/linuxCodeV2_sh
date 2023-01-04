@@ -279,4 +279,13 @@ DefaultRoot ~
 	sudo service proftpd reload
 
 --------------------------------------------
+
+Progremas de terceros para instalar 
+
+```bash
+#Capturadora de pantalla
+sudo apt install tilix
+sudo apt install shutter
+
+```
 mar 13 dic 2022 14:40:57 CST
