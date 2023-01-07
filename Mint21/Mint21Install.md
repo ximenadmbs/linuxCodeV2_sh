@@ -287,5 +287,12 @@ Progremas de terceros para instalar
 sudo apt install tilix
 sudo apt install shutter
 
+#soporte de Snap en Linux Mint
+sudo rm /etc/apt/preferences.d/nosnap.pref
+sudo apt update
+sudo apt install snapd
+#tienda de snap
+sudo snap install snap-store
+
 ```
 mar 13 dic 2022 14:40:57 CST
