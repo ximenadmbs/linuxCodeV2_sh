@@ -47,6 +47,9 @@ echo " "
         sleep 1s
 
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
+    sudo apt install nala -y
+    echo -e "\e[0;38;5;208m█ nala installed \e[0m"
+        sleep 1s
     sudo apt install gnome-tweaks -y
     echo -e "\e[0;38;5;208m█ gnome-tweaks installed \e[0m"
         sleep 1s
