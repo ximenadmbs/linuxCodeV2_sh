@@ -10,7 +10,7 @@ echo "|         direccion: /home/redMount                |"
 echo "+--------------------------------------------------+"
 echo " "
     mkdir /home/redMount
-    mount -t cifs -o username=xenon,password=14789,noperm //192.168.100.22/data-500gb /home/redMount
+    mount -t cifs -o username=xenon,password=14789,noperm //192.168.100.22/xena /home/redMount
 echo "Se monto la carpeta de red en /home/redMount dentro de home"
     date
 echo " "
