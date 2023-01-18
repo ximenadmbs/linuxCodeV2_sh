@@ -378,3 +378,11 @@ echo " "
 ```
 
 ### Instalar zsh y complementos.
+
+### Problema con Nautilus 43 no sigue el tema gtk (Inestable) ⭕
+modificaremos el archivo llamado .profile de la carpeta personal /home/usuario , y agregaremos la siguiente linea en la parte de abajo del archivo.
+
+```bash
+export GTK_THEME=WhiteSur-Dark
+```
+WhiteSur-Dark = al tema que se encuentra en la carpeta .themes

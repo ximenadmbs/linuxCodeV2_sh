@@ -39,6 +39,7 @@ echo -e "\e[0;38;5;208m██ Se actualiso los paquetes del sistema\e[0m"
     sudo add-apt-repository universe -y
     sudo add-apt-repository ppa:appimagelauncher-team/stable -y
     sudo flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+    sudo add-apt-repository ppa:helkaluin/webp-pixbuf-loader -y
     sudo apt update
 
 echo " "
@@ -49,6 +50,9 @@ echo " "
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
     sudo apt install nala -y
     echo -e "\e[0;38;5;208m█ nala installed \e[0m"
+        sleep 1s
+    sudo apt install webp-pixbuf-loader -y
+    echo -e "\e[0;38;5;208m█ webp-pixbuf-loader installed \e[0m"
         sleep 1s
     sudo apt install gnome-tweaks -y
     echo -e "\e[0;38;5;208m█ gnome-tweaks installed \e[0m"
