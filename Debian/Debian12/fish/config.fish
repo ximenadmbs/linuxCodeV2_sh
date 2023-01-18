@@ -1,6 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    set -g -x fish_greeting 'Fish: Bienvenida Ximena 🦄'
+    date
+    set -g -x fish_greeting 'Fish version 3.5.1: Bienvenida Ximena 🦄'
 end
 
-#rura:  ~/.config/fish/
+#ruta:  ~/.config/fish/

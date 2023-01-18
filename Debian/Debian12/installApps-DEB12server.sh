@@ -29,8 +29,7 @@ echo -e "\e[0;38;5;125m[Se iniciara la instalacion, Administrador de paquetes de
 #Seccion de instalacion de actualisaciones:
  	apt install nala -y
 		sleep 2s
-	nala update
-    nala upgrade -y
+	nala update && nala upgrade -y
 echo " "
 echo -e "\e[0;38;5;125m██ Se actualiso los paquetes del sistema\e[0m"
         sleep 1s

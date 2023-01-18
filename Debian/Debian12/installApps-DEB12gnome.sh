@@ -30,8 +30,7 @@ echo " "
 #Seccion de instalacion de actualisaciones:
  	apt install nala -y
 		sleep 2s
-	nala update
-    nala upgrade -y
+	nala update && nala upgrade -y
 		sleep 1s
 	nala autopurge
 	nala clean
