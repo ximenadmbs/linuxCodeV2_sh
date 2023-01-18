@@ -23,12 +23,12 @@ echo "Ximena bash scrip [Versión 1.7]"
 echo "(c) Corporation. Todos los derechos reservados."
 echo -e "\e[0;38;5;125m[Intalador de completentos para Debian12 gnome v1.3 ]\e[0m"
 echo -e "\e[0;38;5;125m[Se recomienda ejecutar estas instrucciones como super usuario, o con = sudo ./installApps-DEB12gnome.sh"
-echo -e "\e[0;38;5;125m[Se iniciara la instalacion.Nala: A Beautiful and Structured Frontend for the APT Command.]\e[0m"
+echo -e "\e[0;38;5;125m[Se iniciara la instalacion. Administrador de paquetes de Nala for the APT Command.]\e[0m"
 #espera 1 segundo
         sleep 2s
 echo " "
 #Seccion de instalacion de actualisaciones:
- 	apt install nala
+ 	apt install nala -y
 		sleep 2s
 	nala update
     nala upgrade -y
