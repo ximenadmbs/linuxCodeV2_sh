@@ -377,7 +377,7 @@ Estos archivos deven estar en /home/usuario/ y abrir una termial en esta ubicaci
 echo " "
 ```
 
-### Instalar zsh y complementos.
+## Instalar zsh y complementos.
 
 ### Problema con Nautilus 43 no sigue el tema gtk (Inestable) ⭕
 modificaremos el archivo llamado .profile de la carpeta personal /home/usuario , y agregaremos la siguiente linea en la parte de abajo del archivo.
@@ -415,3 +415,12 @@ En Debian 9 (Stretch) y posteriores, se puede instalar snap directamente desde l
 	sudo snap install snap-store
 
 Una ves instalado los paquetes se debe reiniciar el equipo.
+
+### Instalar AppimageLauncher  ✅
+lo conseguimos el paquete en la siguiente direccion [https://github.com/TheAssassin/AppImageLauncher/releases] conseguimos el .deb
+
+Instalamos con el intalador de paquetes o con linea de comando, de la siguiente manera.
+
+	sudo dpkg -i appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb
+
+> Se omite la linea de instalacion el repositorio e instalacion.

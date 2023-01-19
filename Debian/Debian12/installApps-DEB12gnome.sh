@@ -40,24 +40,18 @@ echo -e "\e[0;38;5;125m██ Se actualiso los paquetes del sistema\e[0m"
         sleep 2s
 
 #Seccion de Instalacion de repositorios:
-	#add-apt-repository ppa:appimagelauncher-team/stable -y
 	nala install flatpak -y
 		sleep 1s
 	flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
 	nala update
-
-#appimagelauncher no es nesesario en xfce y genome debian11
 echo " "
 echo -e "\e[0;38;5;125m██ Se instalaron nuevos repositorios y se actualiso la base de datos\e[0m"
 echo " "
         sleep 1s
-
 #Seccion de Instalacion de paquetes librerias herramientas de personalisacion:
 	nala install gnome-software-plugin-flatpak -y
 	echo -e "\e[0;38;5;125m█ flatpak installed \e[0m"
         sleep 1s
-	#apt install appimagelauncher -y
-	
 echo " "
 #Seccion de Instalacion de paquetes para la terminal:
 	nala install neofetch -y
