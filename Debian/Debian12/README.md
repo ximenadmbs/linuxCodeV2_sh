@@ -386,3 +386,32 @@ modificaremos el archivo llamado .profile de la carpeta personal /home/usuario ,
 export GTK_THEME=WhiteSur-Dark
 ```
 WhiteSur-Dark = al tema que se encuentra en la carpeta .themes
+
+## Repositorios adicionales para Debian 12 ✅
+Agregar en el archivo el siguiente contenido el la parte baja del archivo.
+
+	sudo nano /etc/apt/sources.list
+
+```bash
+# bullseye-oficiales
+deb http://deb.debian.org/debian/ bullseye main contrib non-free
+deb-src http://deb.debian.org/debian/ bullseye main contrib non-free
+
+# bullseye-debian-multimedia
+deb http://www.deb-multimedia.org bullseye main non-free
+```
+
+Agregamos la llave que nesesita el repositorio multimedia
+
+	sudo nala update -oAcquire::AllowInsecureRepositories=true
+	sudo nala install deb-multimedia-keyring
+
+### Instalar snapcraft y tienda de snap  ✅
+En Debian 9 (Stretch) y posteriores, se puede instalar snap directamente desde la línea de comandos:
+
+	sudo nala update
+	sudo nala install snapd
+	sudo snap install core
+	sudo snap install snap-store
+
+Una ves instalado los paquetes se debe reiniciar el equipo.

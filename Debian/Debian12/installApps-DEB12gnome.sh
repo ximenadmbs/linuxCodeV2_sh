@@ -95,6 +95,9 @@ echo " "
 	nala install font-manager -y
 	echo -e "\e[0;38;5;125m█ font-manager installed \e[0m"
         sleep 1s
+	nala install tilix -y
+	echo -e "\e[0;38;5;125m█ tilix installed \e[0m"
+        sleep 1s
 echo " "
 
 	#Instalación de Paquetería Flatpak (si lanzan error de instalación reiniciar el instalador)
