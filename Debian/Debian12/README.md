@@ -421,6 +421,6 @@ lo conseguimos el paquete en la siguiente direccion [https://github.com/TheAssas
 
 Instalamos con el intalador de paquetes o con linea de comando, de la siguiente manera.
 
-	sudo dpkg -i appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb
+	sudo dpkg -i appimagelauncher_2.2.0_amd64.deb
 
 > Se omite la linea de instalacion el repositorio e instalacion.
