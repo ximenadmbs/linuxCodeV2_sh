@@ -289,55 +289,56 @@ Para desmontar con el siguiente comando:
     sudo apt install --no-install-recommends xubuntu-desktop
 
 ---------------------------------------
+vie 12 abr 2024 17:54:03 CST
 
-### Paqueteria instalada:
+# Paqueteria instalada:
 
-# Snap
-jdowloader2
-krita* (se rompio despues de querer desistalar el imagemagick)
-spotify
+### Snap
+* jdowloader2
+* krita* (se rompio despues de querer desistalar el imagemagick)
+* spotify
 
-# Flatpak
-calibre
-Discord inc
-google
-selector de color
-ariana
-VLC
-ExtensionManager
+## Flatpak
+* calibre
+* Discord inc
+* google
+* selector de color
+* ariana
+* VLC
+* ExtensionManager
 
-# .deb de la tienda
-wine
-krita
-firefox
-inkscape
-wps
-k3b
-edge
-notepadqq
-tilix
-
+## .deb de la tienda
+* wine
+* krita
+* firefox
+* inkscape
+* wps
+* k3b
+* edge
+* notepadqq
+* tilix
 
 ## poner archivos en carpetas
 - por alguna extrana razon al instalar y desistalar paquetes snap (emulador dosbox), esta barre con lascarpetas de usuario que esten vasias, rompiendo y dejando inservibles como enlace simbolico, asi que de inicio ve poniendo un archivo oculto en todas las carpetas .txt sin contenido.
 
-# Tema de Firefox 
+## Tema de Firefox 
 
-- instalar Firefox Color
+instalar Firefox Color
 
 		https://color.firefox.com/?theme=XQAAAAIZAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPr4zmCk-pWgdupc86JBvd1E8G7op8zBPYc2KKtk7a7XxqoELfAddCy4XHYEexXA7Nc_KrjsFLVi9iT9r_SwduHN10rUP1Aa71jgna09VdriOHjkY1ga1UyF_aUfoHKNa95Qh_O5aGMkZ-an0jq--aNh1FSChVjp3P_89P3uXdrPO9F6HXSCCd73Z6-p9rv2OoX2euibzCsOmsyplRNaeoXK_ffZM-A
 		
-# Krita .deb en espanol
-- si instale el krita desde la tienda en formato .deb vendra en ingles, para ponerlo en espanol:
+## Krita .deb en espanol
+si instale el krita desde la tienda en formato .deb vendra en ingles, para ponerlo en espanol:
+
 		sudo nala install krita-l10n
 		
-### Para cambiar permiso edicion de una carpeta y su contenido:
+## Para cambiar permiso edicion de una carpeta y su contenido:
 
 		sudo chmod o+w . -R
-		
-Ruta temas: /home/ximena/.themes
+Ruta temas: 
+		/home/ximena/.themes
 
-### Crear enlaces simbolicos:
+## Crear enlaces simbolicos:
 
 		sudo ln -s /var/spool/cups-pdf/ximenam ~/PDFs
 		
